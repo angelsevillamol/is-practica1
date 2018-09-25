@@ -21,3 +21,19 @@ Hacer los dos pasos anteriores en uno:
 `git commit -am "Mensaje"`
 Historial de commits:
 `git log`
+
+**Comandos básicos III**
+Ver diferencia entre ficheros en el directorio y el repositorio del git:
+`git diff`
+Ver diferencia entre ficheros en el staging y el repositorio:
+`git diff --staged`
+Eliminar archivos:
+~~~
+git rm archivos
+git commit -m "Mensaje"
+~~~
+Mover o renombrar archivos:
+~~~
+git mv antiguo nuevo
+git commit -m "Mensaje"
+~~~
