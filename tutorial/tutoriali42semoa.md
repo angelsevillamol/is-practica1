@@ -5,7 +5,7 @@ Deshacer multiples cambios en el repositorio:
 git reset --soft <id_commit>
 git reset --mixed <id_commit>
 git reset --hard <id_commit>
-~~
+~~~
 
 Listar archivos que git no controla:
 
@@ -49,3 +49,27 @@ Comparar un commit con el actual:
 Comparar dos commits:
 
 `git diff id..id nombre_archivo`
+
+## Ramas
+
+**Comandos Ramas I**
+
+Ver listado de ramas:
+
+`git branch`
+
+Crear una rama:
+
+`git branch nombre_rama`
+
+Cambiarnos a una rama:
+
+`git checkout nombre_rama`
+
+Crear una rama y moverse en un paso:
+
+`git checkout -b nombre_rama`
+
+Comparar ramas:
+
+`git diff nombre_rama..nombre_rama`
