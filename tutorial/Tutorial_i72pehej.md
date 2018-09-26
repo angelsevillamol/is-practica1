@@ -12,5 +12,7 @@
   `git stash drop nombre_stash`
 
   **Aplicar cambio del stash:**
-  `git stash apply nombre_stash`
-  `git stash pop nombre_stash`
+  ~~~
+  git stash apply nombre_stash
+  git stash pop nombre_stash
+  ~~~
