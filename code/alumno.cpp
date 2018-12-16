@@ -10,20 +10,35 @@
 #include <string>
 #include "alumno.hpp"
 
+// Constructor por defecto.
+alumno::alumno()
+{
+    dni_ = "";
+    nombre_ = "";
+    apellidos_ = "";
+    telefono_ = "";
+    email_ = "";
+    direccion_ = "";
+    fechaNacimiento_ = "";
+    curso_ = 0;
+    grupo_ = 0;
+    esLider_ = false;
+}
+
 // Constructor de la clase alumno.
 alumno::alumno(std::string dni, std::string nombre, std::string apellidos, 
                std::string telefono, std::string email, std::string direccion, 
-               std::string fecha_nacimiento, unsigned curso, unsigned grupo, 
-               bool es_lider)
+               std::string fechaNacimiento, unsigned curso, unsigned grupo, 
+               bool esLider)
 {
-    set_dni(dni);
-    set_nombre(nombre);
-    set_apellidos(apellidos);
-    set_telefono(telefono);
-    set_email(email);
-    set_direccion(direccion);
-    set_fecha_nacimiento(fecha_nacimiento);
-    set_curso(curso);
-    set_grupo(grupo);
-    set_es_lider(es_lider);
+    setDni(dni);
+    setNombre(nombre);
+    setApellidos(apellidos);
+    setTelefono(telefono);
+    setEmail(email);
+    setDireccion(direccion);
+    setFechaNacimiento(fechaNacimiento);
+    setCurso(curso);
+    setGrupo(grupo);
+    setEsLider(esLider);
 }
