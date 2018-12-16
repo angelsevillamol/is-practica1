@@ -27,6 +27,7 @@ public:
       std::string fechaNacimiento, unsigned curso, unsigned grupo, bool esLider);
   bool modificarAlumno(std::string dni, alumno alumno);
   bool eliminarAlumno(std::string dni);
+  void borrarAlumnos() { alumnos_.clear(); }
   bool getAlumno(std::string dni, alumno &a);
   void buscarAlumnos(std::list<alumno> &resultado, std::string apellidos = "", std::string dni = "", unsigned grupo = 0);
   void guardarFichero(std::string nombreFichero);

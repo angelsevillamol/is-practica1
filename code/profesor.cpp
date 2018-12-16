@@ -13,28 +13,44 @@
 #include "basedatos.hpp"
 #include "profesor.hpp"
 
-bool profesor::identificar(std::string nombreFichero, std::string usuario, 
+profesor::profesor()
+{
+    nombreUsuario_ = "";
+    esCoordinador_ = false;
+}
+
+bool profesor::iniciarSesion(std::string nombreFichero, std::string usuario, 
     std::string password)
 {
     bool esCoordinador = true;
     std::ifstream infile(nombreFichero, std::ios::binary);
     std::string nombreProfesor, contrProfesor;
 
-    while (!infile.eof()) {
-        getline(infile, nombreProfesor, ',');
-        getline(infile, contrProfesor);
+    if (infile.is_open()) {
+        while (!infile.eof()) {
+            getline(infile, nombreProfesor, ',');
+            getline(infile, contrProfesor);
 
-        if ((usuario == nombreProfesor) and (password == contrProfesor)) {
-            nombreUsuario_ = usuario;
-            esCoordinador_ = esCoordinador;
-            return true;
+            if ((usuario == nombreProfesor) and (password == contrProfesor)) {
+                nombreUsuario_ = usuario;
+                esCoordinador_ = esCoordinador;
+                infile.close();
+                return true;
+            }
+
+            esCoordinador = false;
         }
 
-        esCoordinador = false;
+        infile.close();
     }
-  
-    infile.close();
+
     return false;
+}
+
+void profesor::cerrarSesion() {
+    nombreUsuario_ = "";
+    esCoordinador_ = "";
+    bbdd_.borrarAlumnos();
 }
 
 bool profesor::anadirProfesor(std::string nombreFichero, std::string usuario, 

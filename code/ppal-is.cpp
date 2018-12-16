@@ -1,9 +1,9 @@
 /**
  * @file main.cpp
- * @brief Programa que permite la gestión de alumnos de una asignatura.
+ * @brief Programa que permite la gestión de prof.getBaseDatos() de una asignatura.
  * @date 11-12-2018
  *
- * Este fichero forma parte del proyecto realizado para la gestión de alumnos,
+ * Este fichero forma parte del proyecto realizado para la gestión de prof.getBaseDatos(),
  * para la asignatura Ingeniería del Software de la Universidad de Córdoba.
  */
 
@@ -30,7 +30,9 @@ enum MENU_OPTS
     SALIR = 0
 };
 
+
 void pulseEnter();
+bool acceder(profesor &prof);
 unsigned escribirMenu(bool esCoordinador);
 void obtenerAlumno(alumno &a);
 void mostrarAlumno(const alumno &a);
@@ -38,23 +40,32 @@ void mostrarAlumnos(std::list<alumno> &listaAlumnos);
 
 int main(void)
 {
-    bool esCoordinador = false;
-    bool boolAux;
+    profesor prof;
+    bool b;
     alumno alumnoAux;
     std::string stringAux;
     std::list<alumno> resultado;
-    baseDatos alumnos;
     unsigned option;
 
+    /*
+    // Inicio de sesión del usuario.
     do {
-        switch(option = escribirMenu(esCoordinador)) {
+        b = acceder(prof);
+        if (not b) {
+            std::cout << "Datos erróneos. Por favor, inténtelo otra vez. ";
+            pulseEnter();
+        }
+    } while (not b); */
+
+    do {
+        switch(option = escribirMenu(prof.getEsCoordinador())) {
             case ADD_ALUMNO:
-                if (alumnos.getNumeroAlumnos() >= MAX_ALUMNOS) {
+                if (prof.getBaseDatos().getNumeroAlumnos() >= MAX_ALUMNOS) {
                     std::cout << "El número máximo de alumnos ha sido alcanzado. ";
                 }
                 else {
                     obtenerAlumno(alumnoAux);
-                    if (alumnos.anadirAlumno(alumnoAux) == true) {
+                    if (prof.getBaseDatos().anadirAlumno(alumnoAux) == true) {
                         std::cout << "Alumno añadido correctamente. ";
                     }
                     else {
@@ -65,14 +76,14 @@ int main(void)
                 break;
 
             case MODIFICAR:
-                if (alumnos.getNumeroAlumnos() == 0) {
+                if (prof.getBaseDatos().getNumeroAlumnos() == 0) {
                     std::cout << "La lista de alumnos está vacía. ";
                     pulseEnter();
                 }
                 break;
 
             case BORRAR:
-                if (alumnos.getNumeroAlumnos() == 0) {
+                if (prof.getBaseDatos().getNumeroAlumnos() == 0) {
                     std::cout << "La lista de alumnos está vacía. ";
                 }
                 else {
@@ -81,14 +92,14 @@ int main(void)
                     std::cout << "\tDNI del alumno a eliminar: ";
                     std::cin >> stringAux;
 
-                    boolAux = alumnos.getAlumno(stringAux, alumnoAux);
-                    if (boolAux == true) {
+                    b = prof.getBaseDatos().getAlumno(stringAux, alumnoAux);
+                    if (b == true) {
                         std::cout << "El alumno seleccionado es el siguiente:" << std::endl;
                         mostrarAlumno(alumnoAux);
                         std::cout << "¿Desea eliminarlo de la base de datos? (S/N): ";
                         std::cin >> stringAux;
                         if (stringAux == "S" or stringAux == "s") {
-                            alumnos.eliminarAlumno(alumnoAux.getDni());
+                            prof.getBaseDatos().eliminarAlumno(alumnoAux.getDni());
                             std::cout << "Alumno eliminado correctamente. ";
                         }
                     }
@@ -100,46 +111,46 @@ int main(void)
                 break;
 
             case MOSTRAR:
-                alumnos.buscarAlumnos(resultado, "", "", 0);
+                prof.getBaseDatos().buscarAlumnos(resultado, "", "", 0);
                 mostrarAlumnos(resultado);
-                std::cout << alumnos.getNumeroAlumnos() << " resultados coincidentes. ";
+                std::cout << prof.getBaseDatos().getNumeroAlumnos() << " resultados coincidentes. ";
                 pulseEnter();
                 break;
 
             case GUARDAR:
-                alumnos.guardarFichero(FILE_BBDD_LOCAL);
+                prof.getBaseDatos().guardarFichero(FILE_BBDD_LOCAL);
                 std::cout << "Cambios guardados correctamente. ";
                 pulseEnter();
                 break;
 
             case CARGAR:
-                alumnos.cargarFichero(FILE_BBDD_LOCAL);
+                prof.getBaseDatos().cargarFichero(FILE_BBDD_LOCAL);
                 std::cout << "Datos cargados correctamente. ";
                 pulseEnter();
                 break;
 
             case GUARDAR_COPIA:
-                if (esCoordinador) {
+                if (prof.getEsCoordinador()) {
                     std::cout << "Indique el nombre de la copia de seguridad: ";
                     std::cin >> stringAux;
-                    alumnos.guardarFichero(stringAux);
+                    prof.getBaseDatos().guardarFichero(stringAux);
                     std::cout << "Copia de seguridad guardada correctamente. ";
                     pulseEnter();
                 }
                 break;
 
             case CARGAR_COPIA:
-                if (esCoordinador) {
+                if (prof.getEsCoordinador()) {
                     std::cout << "Indique el nombre de la copia de seguridad: ";
                     std::cin >> stringAux;
-                    alumnos.cargarFichero(stringAux);
+                    prof.getBaseDatos().cargarFichero(stringAux);
                     std::cout << "Datos cargados correctamente. ";
                     pulseEnter();
                 }
                 break;
 
             case ADD_PROFESOR:
-                if (esCoordinador) {
+                if (prof.getEsCoordinador()) {
 
                 }
                 break;
@@ -157,6 +168,23 @@ void pulseEnter()
     std::cout << "Pulse ENTER para continuar. ";
     std::cin.ignore();
     std::cin.ignore();
+}
+
+bool acceder(profesor &prof) 
+{
+    std::string usuario;
+    std::string password;
+
+    std::system("clear");
+    std::cout << "ACCEDER:" << std::endl;
+
+    std::cout << "\tNombre de usuario: ";
+    std::cin >> usuario;
+
+    std::cout << "\tContraseña: ";
+    std::cin >> password;
+
+    return prof.iniciarSesion(FILE_CREDENCIALES, usuario, password);
 }
 
 // Imprime por pantalla el menu de opciones.

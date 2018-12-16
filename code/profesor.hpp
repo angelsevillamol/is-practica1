@@ -22,10 +22,12 @@ class profesor
     bool esCoordinador_;
     baseDatos bbdd_;
   public:
-    profesor(std::string usuario);  //Constructor de la clase Profesor.
+    profesor();
+    std::string getNombreUsuario() { return nombreUsuario_; }
     bool getEsCoordinador() { return esCoordinador_; }  //Devuelve si el profesor es coordinador o no.
     baseDatos& getBaseDatos() { return bbdd_; }
-    bool identificar(std::string nombreFichero, std::string usuario, std::string password);  //Devuelve si el usuario introducido existe.
+    bool iniciarSesion(std::string nombreFichero, std::string usuario, std::string password);  //Devuelve si el usuario introducido existe.
+    void cerrarSesion();
     bool anadirProfesor(std::string nombreFichero, std::string usuario, std::string password);  //Añade un profesor ayudante.
 };
 
