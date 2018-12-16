@@ -11,7 +11,6 @@
 #define PROFESOR_HPP
 
 #include <string>
-#include <fstream>
 #include <list>
 #include "alumno.hpp"
 #include "basedatos.hpp"
@@ -27,8 +26,6 @@ class profesor
     inline bool getCoordinador() {return (esCoordinador_);};  //Devuelve si el profesor es coordinador o no.
     bool identificar(std::string usuario, std::string password);  //Devuelve si el usuario introducido existe.
     bool mostrarAlumnos(int opcion, bool ascendente = false);  //Devuelve la lista de alumnos completa.
-    bool guardarCopia(std::string ficheroCopia = "default");  //Guarda en un fichero binario la lista de alumnos.
-    bool cargarCopia(std::string ficheroCopia = "default");  //Carga en la base de datos los alumnos desde un fichero binario.
 };
 
 class coordinador : profesor {

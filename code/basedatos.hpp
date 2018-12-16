@@ -27,6 +27,8 @@ public:
   bool modificarAlumno(std::string dni, alumno alumno);
   bool eliminarAlumno(std::string dni);
   std::list<alumno> buscarAlumnos(std::string apellidos = "", std::string dni = "", unsigned grupo = 0);
+  void guardarFichero(std::string nombreFichero);
+  void cargarFichero(std::string nombreFichero); 
 };
 
 #endif // BASEDATOS_HPP

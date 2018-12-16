@@ -10,6 +10,7 @@
 #include <list>
 #include <string>
 #include <iostream>
+#include <fstream>
 #include "alumno.hpp"
 #include "basedatos.hpp"
 
@@ -102,4 +103,65 @@ std::list<alumno> baseDatos::buscarAlumnos(std::string apellidos, std::string dn
     }
 
     return resultado;
+}
+
+void baseDatos::guardarFichero(std::string nombreFichero) {
+    std::ofstream outfile(nombreFichero, std::ios::binary);
+    std::list<alumno>::iterator iter;
+
+    if (outfile.is_open()) {
+        for (iter = alumnos_.begin(); iter != alumnos_.end(); iter++) {
+            outfile << iter->getDni() + ',' 
+                    << iter->getNombre() + ',' 
+                    << iter->getApellidos() + ',' 
+                    << iter->getTelefono() + ','
+                    << iter->getEmail() + ',' 
+                    << iter->getDireccion() + ',' 
+                    << iter->getCurso() + ',' 
+                    << iter->getFechaNacimiento() + ','
+                    << iter->getGrupo() + ',' 
+                    << (iter->getEsLider()? "1" : "0") + '\n';
+        }
+        
+        outfile.close();
+    }
+}
+
+void baseDatos::cargarFichero(std::string nombreFichero) {
+    std::ifstream infile(nombreFichero, std::ios::binary);
+    std::string dni; 
+    std::string nombre;
+    std::string apellidos;
+    std::string telefono; 
+    std::string email; 
+    std::string direccion; 
+    std::string fechaNacimiento;
+    unsigned curso;
+    unsigned grupo;  
+    bool esLider;
+    std::string aux;
+
+    if (infile.is_open()) {
+        alumnos_.clear();
+
+        while (getline(infile, dni, ',')) {
+            getline(infile, nombre, ',');
+            getline(infile, apellidos, ',');
+            getline(infile, telefono, ',');
+            getline(infile, email, ',');
+            getline(infile, direccion, ',');
+            getline(infile, aux, ',');
+            curso = atoi(aux.c_str());
+            getline(infile, fechaNacimiento, ',');
+            getline(infile, aux, ',');
+            grupo = atoi(aux.c_str());
+            getline(infile, aux, '\n');
+            esLider = (aux == "1");
+
+            anadirAlumno(dni, nombre, apellidos, telefono, email, 
+                direccion, fechaNacimiento, curso, grupo, esLider);
+        }
+
+        infile.close();
+    }
 }
