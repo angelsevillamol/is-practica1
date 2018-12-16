@@ -15,7 +15,6 @@
 #include "basedatos.hpp"
 
 bool baseDatos::anadirAlumno(const alumno &nuevoAlumno) {
-
     if (getNumeroAlumnos() >= 150) {
         return false;
     }
@@ -85,9 +84,9 @@ bool baseDatos::eliminarAlumno(std::string dni){
 	return false;
 }
 
-std::list<alumno> baseDatos::buscarAlumnos(std::string apellidos, std::string dni, 
-    unsigned grupo) {
-    std::list<alumno> resultado;
+void baseDatos::buscarAlumnos(std::list<alumno> &resultado, 
+    std::string apellidos, std::string dni, unsigned grupo)
+{
     std::list<alumno>::iterator iter;
     alumno nuevoAlumno;
 
@@ -111,8 +110,6 @@ std::list<alumno> baseDatos::buscarAlumnos(std::string apellidos, std::string dn
             }
         }
     }
-
-    return resultado;
 }
 
 void baseDatos::guardarFichero(std::string nombreFichero) {
@@ -130,7 +127,7 @@ void baseDatos::guardarFichero(std::string nombreFichero) {
                     << iter->getCurso() + ',' 
                     << iter->getFechaNacimiento() + ','
                     << iter->getGrupo() + ',' 
-                    << (iter->getEsLider()? "1" : "0") + '\n';
+                    << (iter->getEsLider()? "TRUE" : "FALSE") + '\n';
         }
         
         outfile.close();
@@ -165,8 +162,8 @@ void baseDatos::cargarFichero(std::string nombreFichero) {
             getline(infile, fechaNacimiento, ',');
             getline(infile, aux, ',');
             grupo = atoi(aux.c_str());
-            getline(infile, aux, '\n');
-            esLider = (aux == "1");
+            getline(infile, aux);
+            esLider = (aux == "TRUE");
 
             anadirAlumno(dni, nombre, apellidos, telefono, email, 
                 direccion, fechaNacimiento, curso, grupo, esLider);

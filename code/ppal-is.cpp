@@ -13,6 +13,8 @@
 #include "is.hpp"
 
 #define MAX_ALUMNOS 150
+#define FILE_CREDENCIALES "credenciales.bin"
+#define FILE_BBDD_LOCAL "localdata.bin"
 
 enum MENU_OPTS
 {
@@ -30,10 +32,14 @@ enum MENU_OPTS
 
 unsigned escribirMenu(bool esCoordinador);
 void obtenerAlumno(alumno &a);
+void mostrarAlumno(const alumno &a);
+void mostrarAlumnos(std::list<alumno> &listaAlumnos);
 
 int main(void)
 {
     alumno alumnoAux;
+    std::string nombreFichero;
+    std::list<alumno> resultado;
     baseDatos alumnos;
     unsigned option;
 
@@ -41,7 +47,8 @@ int main(void)
         switch(option = escribirMenu(false)) {
             case ADD_ALUMNO:
                 if (alumnos.getNumeroAlumnos() >= MAX_ALUMNOS) {
-                    std::cout << "El número máximo de alumnos ha sido alcanzado. Pulse ENTER para continuar. ";
+                    std::cout << "El número máximo de alumnos ha sido alcanzado. "
+                              << "Pulse ENTER para continuar. ";
                     std::cin.ignore();
                     std::cin.ignore();
                 }
@@ -63,12 +70,20 @@ int main(void)
                 break;
 
             case MODIFICAR:
+                if (alumnos.getNumeroAlumnos() == 0) {
+                    std::cout << "El número máximo de alumnos ha sido alcanzado. Pulse ENTER para continuar. ";
+                    std::cin.ignore();
+                    std::cin.ignore(); 
+                }
                 break;
 
             case BORRAR:
                 break;
 
             case MOSTRAR:
+                resultado.clear();
+                alumnos.buscarAlumnos(resultado, "", "", 0);
+                mostrarAlumnos(resultado);
                 std::cout << alumnos.getNumeroAlumnos() << " resultados coincidentes. "
                           << "Pulse Enter para continuar. ";
                 std::cin.ignore();
@@ -76,15 +91,39 @@ int main(void)
                 break;
 
             case GUARDAR:
+                alumnos.guardarFichero(FILE_BBDD_LOCAL);
+                std::cout << "Cambios guardados correctamente. "
+                          << "Pulse ENTER para continuar. ";
+                std::cin.ignore();
+                std::cin.ignore();
                 break;
 
             case CARGAR:
+                alumnos.cargarFichero(FILE_BBDD_LOCAL);
+                std::cout << "Datos cargados correctamente. "
+                          << "Pulse ENTER para continuar. ";
+                std::cin.ignore();
+                std::cin.ignore();
                 break;
 
             case GUARDAR_COPIA:
+                std::cout << "Indique el nombre de la copia de seguridad: ";
+                std::cin >> nombreFichero;
+                alumnos.guardarFichero(nombreFichero);
+                std::cout << "Copia de seguridad guardada correctamente. "
+                          << "Pulse ENTER para continuar. ";
+                std::cin.ignore();
+                std::cin.ignore();
                 break;
 
             case CARGAR_COPIA:
+                std::cout << "Indique el nombre de la copia de seguridad: ";
+                std::cin >> nombreFichero;
+                alumnos.cargarFichero(nombreFichero);
+                std::cout << "Datos cargados correctamente. "
+                          << "Pulse ENTER para continuar. ";
+                std::cin.ignore();
+                std::cin.ignore();
                 break;
 
             case ADD_PROFESOR:
@@ -132,45 +171,68 @@ void obtenerAlumno(alumno &a)
     std::string aux;
 
     std::system("clear");
+    std::cout << "AÑADIR ALUMNO: " << std::endl;
 
-    std::cout << "DNI: ";
+    std::cout << "\tDNI: ";
     std::cin >> aux;
     a.setDni(aux);
 
-    std::cout << "Nombre: ";
+    std::cout << "\tNombre: ";
     std::cin >> aux;
     a.setNombre(aux);
 
-    std::cout << "Apellidos: ";
+    std::cout << "\tApellidos: ";
     std::cin >> aux;
     a.setApellidos(aux);
 
-    std::cout << "Telefono: ";
+    std::cout << "\tTelefono: ";
     std::cin >> aux;
     a.setTelefono(aux);
 
-    std::cout << "e-mail: ";
+    std::cout << "\te-mail: ";
     std::cin >> aux;
     a.setEmail(aux);
 
-    std::cout << "Dirección postal: ";
+    std::cout << "\tDirección postal: ";
     std::cin >> aux;
     a.setDireccion(aux);
 
-    std::cout << "Fecha de nacimiento: ";
+    std::cout << "\tFecha de nacimiento (dd/mm/aaaa): ";
     std::cin >> aux;
     a.setFechaNacimiento(aux);
 
-    std::cout << "Curso más alto matriculado: ";
+    std::cout << "\tCurso más alto matriculado: ";
     std::cin >> aux;
     a.setCurso(atoi(aux.c_str()));
 
-    std::cout << "Grupo: ";
+    std::cout << "\tGrupo: ";
     std::cin >> aux;
     a.setGrupo(atoi(aux.c_str()));
 
-    std::cout << "¿Es líder del grupo? (S/N): ";
+    std::cout << "\t¿Es líder del grupo? (S/N): ";
     std::cin >> aux;
     a.setEsLider(aux == "S" or aux == "s"? true : false);
 }
 
+void mostrarAlumno(const alumno &a) {
+    std::cout << "\tDNI: " << a.getDni() << std::endl;
+    std::cout << "\tNombre: " << a.getNombre() << std::endl;
+    std::cout << "\tApellidos: " << a.getApellidos() << std::endl;
+    std::cout << "\tTelefono: " << a.getTelefono() << std::endl;
+    std::cout << "\te-mail: " << a.getEmail() << std::endl;
+    std::cout << "\tDirección postal: " << a.getDireccion() << std::endl;
+    std::cout << "\tFecha de nacimiento: " << a.getFechaNacimiento() << std::endl;
+    std::cout << "\tCurso más alto matriculado: " << a.getCurso() << std::endl;
+    std::cout << "\tGrupo: " << a.getGrupo() << std::endl;
+    std::cout << "\tLider del Grupo: " << (a.getEsLider()? "TRUE" : "FALSE") << std::endl;
+}
+
+void mostrarAlumnos(std::list<alumno> &listaAlumnos) {
+    std::list<alumno>::iterator iter;
+
+    std::cout << "MOSTRAR ALUMNOS:" << std::endl;
+    for (iter = listaAlumnos.begin(); iter != listaAlumnos.end(); iter++) {
+        mostrarAlumno(*iter);
+        std::cout << std::endl;
+    }
+}
