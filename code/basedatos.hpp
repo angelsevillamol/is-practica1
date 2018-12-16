@@ -21,6 +21,7 @@ private:
 
 public:
   unsigned getNumeroAlumnos() {return alumnos_.size(); }
+  bool anadirAlumno(const alumno &nuevoAlumno);
   bool anadirAlumno(std::string dni, std::string nombre, std::string apellidos, 
       std::string telefono, std::string email, std::string direccion, 
       std::string fechaNacimiento, unsigned curso, unsigned grupo, bool esLider);

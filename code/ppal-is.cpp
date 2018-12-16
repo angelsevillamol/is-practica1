@@ -7,10 +7,12 @@
  * para la asignatura Ingeniería del Software de la Universidad de Córdoba.
  */
 
-
+#include <stdlib.h>
 #include <iostream>
 #include <string>
 #include "is.hpp"
+
+#define MAX_ALUMNOS 150
 
 enum MENU_OPTS
 {
@@ -26,25 +28,73 @@ enum MENU_OPTS
     SALIR = 0
 };
 
-/**
- * @brief Imprime por pantalla el menu de opciones.
- * @param esCoordinador indica si el profesor actual es profesor coordinador.
- * @return opcion del programa escogida.
- */
 unsigned escribirMenu(bool esCoordinador);
-
-/**
- * @brief Muestra y realiza las funciones que permite el menú hasta que 
- *        el usuario salga del programa.
- * @param esCoordinador indica si el profesor actual es profesor coordinador.
- */
-void ejecutarMenu(bool esCoordinador);
+void obtenerAlumno(alumno &a);
 
 int main(void)
 {
-    bool esCoordinador = true;
+    alumno alumnoAux;
+    baseDatos alumnos;
+    unsigned option;
 
-    ejecutarMenu(esCoordinador);
+    do {
+        switch(option = escribirMenu(false)) {
+            case ADD_ALUMNO:
+                if (alumnos.getNumeroAlumnos() >= MAX_ALUMNOS) {
+                    std::cout << "El número máximo de alumnos ha sido alcanzado. Pulse ENTER para continuar. ";
+                    std::cin.ignore();
+                    std::cin.ignore();
+                }
+                else {
+                    obtenerAlumno(alumnoAux);
+                    if (alumnos.anadirAlumno(alumnoAux) == true) {
+                        std::cout << "Alumno añadido correctamente. "
+                                  << "Pulse ENTER para continuar. ";
+                        std::cin.ignore();
+                        std::cin.ignore();
+                    }
+                    else {
+                        std::cout << "Ha ocurrido algún problema durante la inserción. "
+                                  << "Pulse ENTER para continuar. ";
+                        std::cin.ignore();
+                        std::cin.ignore();
+                    }
+                }
+                break;
+
+            case MODIFICAR:
+                break;
+
+            case BORRAR:
+                break;
+
+            case MOSTRAR:
+                std::cout << alumnos.getNumeroAlumnos() << " resultados coincidentes. "
+                          << "Pulse Enter para continuar. ";
+                std::cin.ignore();
+                std::cin.ignore();
+                break;
+
+            case GUARDAR:
+                break;
+
+            case CARGAR:
+                break;
+
+            case GUARDAR_COPIA:
+                break;
+
+            case CARGAR_COPIA:
+                break;
+
+            case ADD_PROFESOR:
+                break;
+
+            case SALIR:
+                break;
+        }
+    } while (option != SALIR); 
+
 	exit(EXIT_SUCCESS);	
 }
 
@@ -53,6 +103,7 @@ unsigned escribirMenu(bool esCoordinador)
 {
     unsigned option;
 
+    std::system("clear");
     std::cout << "Menú de opciones:" << std::endl;
     std::cout << "\t1. Añadir alumno." << std::endl;
     std::cout << "\t2. Modificar alumno." << std::endl;
@@ -76,43 +127,50 @@ unsigned escribirMenu(bool esCoordinador)
     return option;
 }
 
-// Muestra y realiza las funciones que permite el menú hasta que el usuario 
-// salga del programa.
-void ejecutarMenu(bool esCoordinador)
+void obtenerAlumno(alumno &a)
 {
-    unsigned option;
+    std::string aux;
 
-    do {
-        switch(option = escribirMenu(esCoordinador)) {
-            case ADD_ALUMNO:
-                break;
+    std::system("clear");
 
-            case MODIFICAR:
-                break;
+    std::cout << "DNI: ";
+    std::cin >> aux;
+    a.setDni(aux);
 
-            case BORRAR:
-                break;
+    std::cout << "Nombre: ";
+    std::cin >> aux;
+    a.setNombre(aux);
 
-            case MOSTRAR:
-                break;
+    std::cout << "Apellidos: ";
+    std::cin >> aux;
+    a.setApellidos(aux);
 
-            case GUARDAR:
-                break;
+    std::cout << "Telefono: ";
+    std::cin >> aux;
+    a.setTelefono(aux);
 
-            case CARGAR:
-                break;
+    std::cout << "e-mail: ";
+    std::cin >> aux;
+    a.setEmail(aux);
 
-            case GUARDAR_COPIA:
-                break;
+    std::cout << "Dirección postal: ";
+    std::cin >> aux;
+    a.setDireccion(aux);
 
-            case CARGAR_COPIA:
-                break;
+    std::cout << "Fecha de nacimiento: ";
+    std::cin >> aux;
+    a.setFechaNacimiento(aux);
 
-            case ADD_PROFESOR:
-                break;
+    std::cout << "Curso más alto matriculado: ";
+    std::cin >> aux;
+    a.setCurso(atoi(aux.c_str()));
 
-            case SALIR:
-                break;
-        }
-    } while (option != SALIR); 
+    std::cout << "Grupo: ";
+    std::cin >> aux;
+    a.setGrupo(atoi(aux.c_str()));
+
+    std::cout << "¿Es líder del grupo? (S/N): ";
+    std::cin >> aux;
+    a.setEsLider(aux == "S" or aux == "s"? true : false);
 }
+

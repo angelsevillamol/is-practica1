@@ -14,6 +14,16 @@
 #include "alumno.hpp"
 #include "basedatos.hpp"
 
+bool baseDatos::anadirAlumno(const alumno &nuevoAlumno) {
+
+    if (getNumeroAlumnos() >= 150) {
+        return false;
+    }
+
+    alumnos_.push_back(nuevoAlumno);
+    return true;
+}
+
 bool baseDatos::anadirAlumno(std::string dni, std::string nombre, 
     std::string apellidos, std::string telefono, std::string email, 
     std::string direccion, std::string fechaNacimiento, unsigned curso, 
