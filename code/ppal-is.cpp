@@ -30,6 +30,7 @@ enum MENU_OPTS
     SALIR = 0
 };
 
+void pulseEnter();
 unsigned escribirMenu(bool esCoordinador);
 void obtenerAlumno(alumno &a);
 void mostrarAlumno(const alumno &a);
@@ -37,8 +38,9 @@ void mostrarAlumnos(std::list<alumno> &listaAlumnos);
 
 int main(void)
 {
+    bool boolAux;
     alumno alumnoAux;
-    std::string nombreFichero;
+    std::string stringAux;
     std::list<alumno> resultado;
     baseDatos alumnos;
     unsigned option;
@@ -47,83 +49,86 @@ int main(void)
         switch(option = escribirMenu(false)) {
             case ADD_ALUMNO:
                 if (alumnos.getNumeroAlumnos() >= MAX_ALUMNOS) {
-                    std::cout << "El número máximo de alumnos ha sido alcanzado. "
-                              << "Pulse ENTER para continuar. ";
-                    std::cin.ignore();
-                    std::cin.ignore();
+                    std::cout << "El número máximo de alumnos ha sido alcanzado. ";
+                    pulseEnter();
                 }
                 else {
                     obtenerAlumno(alumnoAux);
                     if (alumnos.anadirAlumno(alumnoAux) == true) {
-                        std::cout << "Alumno añadido correctamente. "
-                                  << "Pulse ENTER para continuar. ";
-                        std::cin.ignore();
-                        std::cin.ignore();
+                        std::cout << "Alumno añadido correctamente. ";
+                        pulseEnter();
                     }
                     else {
-                        std::cout << "Ha ocurrido algún problema durante la inserción. "
-                                  << "Pulse ENTER para continuar. ";
-                        std::cin.ignore();
-                        std::cin.ignore();
+                        std::cout << "Ha ocurrido algún problema durante la inserción. ";
+                        pulseEnter();
                     }
                 }
                 break;
 
             case MODIFICAR:
                 if (alumnos.getNumeroAlumnos() == 0) {
-                    std::cout << "El número máximo de alumnos ha sido alcanzado. Pulse ENTER para continuar. ";
-                    std::cin.ignore();
-                    std::cin.ignore(); 
+                    std::cout << "La lista de alumnos está vacía. ";
+                    pulseEnter();
                 }
                 break;
 
             case BORRAR:
+                if (alumnos.getNumeroAlumnos() == 0) {
+                    std::cout << "La lista de alumnos está vacía. ";
+                    pulseEnter();
+                }
+                else {
+                    std::system("clear");
+                    std::cout << "BORRAR ALUMNO: " << std::endl;
+                    std::cout << "\tDNI del alumno a eliminar: ";
+                    std::cin >> stringAux;
+                    boolAux = alumnos.eliminarAlumno(stringAux);
+
+
+                    if (boolAux == true) {
+                        std::cout << "Alumno eliminado correctamente. ";
+                        pulseEnter();
+                    }
+                    else {
+                        std::cout << "No se ha encontrado al alumno. ";
+                        pulseEnter();
+                    }
+                }
                 break;
 
             case MOSTRAR:
-                resultado.clear();
                 alumnos.buscarAlumnos(resultado, "", "", 0);
                 mostrarAlumnos(resultado);
-                std::cout << alumnos.getNumeroAlumnos() << " resultados coincidentes. "
-                          << "Pulse Enter para continuar. ";
-                std::cin.ignore();
-                std::cin.ignore();
+                std::cout << alumnos.getNumeroAlumnos() << " resultados coincidentes. ";
+                pulseEnter();
                 break;
 
             case GUARDAR:
                 alumnos.guardarFichero(FILE_BBDD_LOCAL);
-                std::cout << "Cambios guardados correctamente. "
-                          << "Pulse ENTER para continuar. ";
-                std::cin.ignore();
-                std::cin.ignore();
+                std::cout << "Cambios guardados correctamente. ";
+                pulseEnter();
                 break;
 
             case CARGAR:
                 alumnos.cargarFichero(FILE_BBDD_LOCAL);
-                std::cout << "Datos cargados correctamente. "
-                          << "Pulse ENTER para continuar. ";
-                std::cin.ignore();
-                std::cin.ignore();
+                std::cout << "Datos cargados correctamente. ";
+                pulseEnter();
                 break;
 
             case GUARDAR_COPIA:
                 std::cout << "Indique el nombre de la copia de seguridad: ";
-                std::cin >> nombreFichero;
-                alumnos.guardarFichero(nombreFichero);
-                std::cout << "Copia de seguridad guardada correctamente. "
-                          << "Pulse ENTER para continuar. ";
-                std::cin.ignore();
-                std::cin.ignore();
+                std::cin >> stringAux;
+                alumnos.guardarFichero(stringAux);
+                std::cout << "Copia de seguridad guardada correctamente. ";
+                pulseEnter();
                 break;
 
             case CARGAR_COPIA:
                 std::cout << "Indique el nombre de la copia de seguridad: ";
-                std::cin >> nombreFichero;
-                alumnos.cargarFichero(nombreFichero);
-                std::cout << "Datos cargados correctamente. "
-                          << "Pulse ENTER para continuar. ";
-                std::cin.ignore();
-                std::cin.ignore();
+                std::cin >> stringAux;
+                alumnos.cargarFichero(stringAux);
+                std::cout << "Datos cargados correctamente. ";
+                pulseEnter();
                 break;
 
             case ADD_PROFESOR:
@@ -135,6 +140,13 @@ int main(void)
     } while (option != SALIR); 
 
 	exit(EXIT_SUCCESS);	
+}
+
+void pulseEnter() 
+{
+    std::cout << "Pulse ENTER para continuar. ";
+    std::cin.ignore();
+    std::cin.ignore();
 }
 
 // Imprime por pantalla el menu de opciones.

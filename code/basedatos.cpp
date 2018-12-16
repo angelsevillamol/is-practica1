@@ -90,6 +90,7 @@ void baseDatos::buscarAlumnos(std::list<alumno> &resultado,
     std::list<alumno>::iterator iter;
     alumno nuevoAlumno;
 
+    resultado.clear();
     for (iter = alumnos_.begin(); iter != alumnos_.end(); iter++) {
         if (apellidos == "" or apellidos == iter->getApellidos()) {
             if (dni == "" or dni == iter->getDni()) {
