@@ -23,14 +23,10 @@ class profesor
     baseDatos bbdd_;
   public:
     profesor(std::string usuario);  //Constructor de la clase Profesor.
-    inline bool getCoordinador() {return (esCoordinador_);};  //Devuelve si el profesor es coordinador o no.
-    bool identificar(std::string usuario, std::string password);  //Devuelve si el usuario introducido existe.
-    bool mostrarAlumnos(int opcion, bool ascendente = false);  //Devuelve la lista de alumnos completa.
-};
-
-class coordinador : profesor {
-    coordinador(std::string usuario);  //Constructor de la calse Coordinador.
-    bool addProfesor(std::string usuario, std::string password);  //Añade un profesor ayudante.
+    bool getEsCoordinador() { return esCoordinador_; }  //Devuelve si el profesor es coordinador o no.
+    baseDatos& getBaseDatos() { return bbdd_; }
+    bool identificar(std::string nombreFichero, std::string usuario, std::string password);  //Devuelve si el usuario introducido existe.
+    bool anadirProfesor(std::string nombreFichero, std::string usuario, std::string password);  //Añade un profesor ayudante.
 };
 
 #endif // PROFESOR_HPP

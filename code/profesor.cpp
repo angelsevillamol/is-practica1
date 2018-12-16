@@ -13,30 +13,40 @@
 #include "basedatos.hpp"
 #include "profesor.hpp"
 
-bool profesor::identificar(std::string usuario, std::string password){
-  std::ifstream credenciales("credenciales.bin", std::ios::binary);
-  std::string nombreProfesor, contrProfesor;
+bool profesor::identificar(std::string nombreFichero, std::string usuario, 
+    std::string password)
+{
+    bool esCoordinador = true;
+    std::ifstream infile(nombreFichero, std::ios::binary);
+    std::string nombreProfesor, contrProfesor;
 
-  while (!credenciales.eof()) {
-    getline(credenciales, nombreProfesor, ',');
-    getline(credenciales, contrProfesor, '\n');
+    while (!infile.eof()) {
+        getline(infile, nombreProfesor, ',');
+        getline(infile, contrProfesor);
 
-    if ((usuario == nombreProfesor) && (password == contrProfesor)) {
-      return true;
+        if ((usuario == nombreProfesor) and (password == contrProfesor)) {
+            nombreUsuario_ = usuario;
+            esCoordinador_ = esCoordinador;
+            return true;
+        }
+
+        esCoordinador = false;
     }
-  }
-  credenciales.close();
-  return false;
+  
+    infile.close();
+    return false;
 }
 
-bool coordinador::addProfesor(std::string usuario, std::string password){
-  if(identificar(usuario, password) == true){
-    return false;
-  }
+bool profesor::anadirProfesor(std::string nombreFichero, std::string usuario, 
+    std::string password)
+{
+    if (not getEsCoordinador()) {
+        return false;
+    }
 
-  std::ofstream credenciales("credenciales.bin", std::ios::binary);
-  credenciales << usuario + ", " + password;
+    std::ofstream outfile(nombreFichero, std::ios::binary);
+    outfile << usuario + ", " + password;
 
-  credenciales.close();
-  return true;
+    outfile.close();
+    return true;
 }

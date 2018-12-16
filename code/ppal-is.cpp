@@ -38,6 +38,7 @@ void mostrarAlumnos(std::list<alumno> &listaAlumnos);
 
 int main(void)
 {
+    bool esCoordinador = false;
     bool boolAux;
     alumno alumnoAux;
     std::string stringAux;
@@ -46,7 +47,7 @@ int main(void)
     unsigned option;
 
     do {
-        switch(option = escribirMenu(false)) {
+        switch(option = escribirMenu(esCoordinador)) {
             case ADD_ALUMNO:
                 if (alumnos.getNumeroAlumnos() >= MAX_ALUMNOS) {
                     std::cout << "El número máximo de alumnos ha sido alcanzado. ";
@@ -118,22 +119,29 @@ int main(void)
                 break;
 
             case GUARDAR_COPIA:
-                std::cout << "Indique el nombre de la copia de seguridad: ";
-                std::cin >> stringAux;
-                alumnos.guardarFichero(stringAux);
-                std::cout << "Copia de seguridad guardada correctamente. ";
-                pulseEnter();
+                if (esCoordinador) {
+                    std::cout << "Indique el nombre de la copia de seguridad: ";
+                    std::cin >> stringAux;
+                    alumnos.guardarFichero(stringAux);
+                    std::cout << "Copia de seguridad guardada correctamente. ";
+                    pulseEnter();
+                }
                 break;
 
             case CARGAR_COPIA:
-                std::cout << "Indique el nombre de la copia de seguridad: ";
-                std::cin >> stringAux;
-                alumnos.cargarFichero(stringAux);
-                std::cout << "Datos cargados correctamente. ";
-                pulseEnter();
+                if (esCoordinador) {
+                    std::cout << "Indique el nombre de la copia de seguridad: ";
+                    std::cin >> stringAux;
+                    alumnos.cargarFichero(stringAux);
+                    std::cout << "Datos cargados correctamente. ";
+                    pulseEnter();
+                }
                 break;
 
             case ADD_PROFESOR:
+                if (esCoordinador) {
+
+                }
                 break;
 
             case SALIR:
