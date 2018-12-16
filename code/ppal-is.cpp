@@ -50,19 +50,17 @@ int main(void)
             case ADD_ALUMNO:
                 if (alumnos.getNumeroAlumnos() >= MAX_ALUMNOS) {
                     std::cout << "El número máximo de alumnos ha sido alcanzado. ";
-                    pulseEnter();
                 }
                 else {
                     obtenerAlumno(alumnoAux);
                     if (alumnos.anadirAlumno(alumnoAux) == true) {
                         std::cout << "Alumno añadido correctamente. ";
-                        pulseEnter();
                     }
                     else {
                         std::cout << "Ha ocurrido algún problema durante la inserción. ";
-                        pulseEnter();
                     }
                 }
+                pulseEnter();
                 break;
 
             case MODIFICAR:
@@ -75,25 +73,29 @@ int main(void)
             case BORRAR:
                 if (alumnos.getNumeroAlumnos() == 0) {
                     std::cout << "La lista de alumnos está vacía. ";
-                    pulseEnter();
                 }
                 else {
                     std::system("clear");
                     std::cout << "BORRAR ALUMNO: " << std::endl;
                     std::cout << "\tDNI del alumno a eliminar: ";
                     std::cin >> stringAux;
-                    boolAux = alumnos.eliminarAlumno(stringAux);
 
-
+                    boolAux = alumnos.getAlumno(stringAux, alumnoAux);
                     if (boolAux == true) {
-                        std::cout << "Alumno eliminado correctamente. ";
-                        pulseEnter();
+                        std::cout << "El alumno seleccionado es el siguiente:" << std::endl;
+                        mostrarAlumno(alumnoAux);
+                        std::cout << "¿Desea eliminarlo de la base de datos? (S/N): ";
+                        std::cin >> stringAux;
+                        if (stringAux == "S" or stringAux == "s") {
+                            alumnos.eliminarAlumno(alumnoAux.getDni());
+                            std::cout << "Alumno eliminado correctamente. ";
+                        }
                     }
                     else {
                         std::cout << "No se ha encontrado al alumno. ";
-                        pulseEnter();
                     }
                 }
+                pulseEnter();
                 break;
 
             case MOSTRAR:

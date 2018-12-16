@@ -66,7 +66,8 @@ bool baseDatos::modificarAlumno(std::string dni, alumno nuevoAlumno) {
     return false;
 }
 
-bool baseDatos::eliminarAlumno(std::string dni){
+bool baseDatos::eliminarAlumno(std::string dni)
+{
     std::list<alumno>::iterator iter;
 
 	if (getNumeroAlumnos() == 0) {
@@ -82,6 +83,29 @@ bool baseDatos::eliminarAlumno(std::string dni){
 	}
 
 	return false;
+}
+
+bool baseDatos::getAlumno(std::string dni, alumno &a)
+{
+    std::list<alumno>::iterator iter;
+
+    for (iter = alumnos_.begin(); iter != alumnos_.end(); iter++) {
+        if (dni == iter->getDni()) {
+            a.setDni(iter->getDni());
+            a.setNombre(iter->getNombre());
+            a.setApellidos(iter->getApellidos());
+            a.setTelefono(iter->getTelefono());
+            a.setEmail(iter->getEmail());
+            a.setDireccion(iter->getDireccion());
+            a.setFechaNacimiento(iter->getFechaNacimiento());
+            a.setCurso(iter->getCurso());
+            a.setGrupo(iter->getGrupo());
+            a.setEsLider(iter->getEsLider());
+            return true;
+        }
+    }
+
+    return false;
 }
 
 void baseDatos::buscarAlumnos(std::list<alumno> &resultado, 
