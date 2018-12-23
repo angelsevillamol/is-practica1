@@ -49,6 +49,8 @@ unsigned getCriteriosBusqueda(unsigned numeroAlumnos, std::string dni,
 void setCriteriosBusqueda(unsigned option, std::string &dni, std::string &apellidos, 
     unsigned &grupo, bool &asc, unsigned &criterio, bool &formato_md);
 void ordenarAlumnos(std::list<alumno> &alumnos, unsigned criterio, bool asc);
+void mostrarAlumnosMarkdown(const std::list<alumno> &alumnos);
+void mostrarAlumnosHTML(const std::list<alumno> &alumnos);
 void listarAlumnos(const profesor &prof);
 
 int main(void)
@@ -445,7 +447,7 @@ void ordenarAlumnos(std::list<alumno> &alumnos, unsigned criterio, bool asc)
 void mostrarAlumnosMarkdown(const std::list<alumno> &alumnos)
 {
     std::list<alumno>::const_iterator iter;
-    std::ofstream outfile("output.md");
+    std::ofstream outfile("../output.md");
 
     if (outfile.is_open()) {
 
@@ -476,7 +478,7 @@ void mostrarAlumnosMarkdown(const std::list<alumno> &alumnos)
 void mostrarAlumnosHTML(const std::list<alumno> &alumnos)
 {
     std::list<alumno>::const_iterator iter;
-    std::ofstream outfile("output.html");
+    std::ofstream outfile("../output.html");
 
     if (outfile.is_open()) {
         // Se imprime la cabecera.
@@ -488,16 +490,16 @@ void mostrarAlumnosHTML(const std::list<alumno> &alumnos)
         for (iter = alumnos.begin(); iter != alumnos.end(); iter++) {
             outfile << "<ul>" << std::endl;
             if (iter->getEsLider()) {
-                outfile << "<li><b>Nombre: " << iter->getApellidos() << ', ' << iter->getNombre() << "</b></li>" << std::endl;
+                outfile << "<li><b>Nombre: " << iter->getApellidos() << ", " << iter->getNombre() << "</b></li>" << std::endl;
             } else {
-                outfile << "<li>Nombre: " << iter->getApellidos() << ', ' << iter->getNombre() << "</li>" << std::endl;
+                outfile << "<li>Nombre: " << iter->getApellidos() << ", " << iter->getNombre() << "</li>" << std::endl;
             }
             outfile << "<li>DNI: " << iter->getDni() << "</li>" << std::endl;
             outfile << "<li>Telefono: " << iter->getTelefono() << "</li>" << std::endl;
             outfile << "<li>e-mail: " << iter->getEmail() << "</li>" << std::endl;
             outfile << "<li>Direccion: " << iter->getDireccion() << "</li>" << std::endl;
             outfile << "<li>Fecha de nacimiento: " << iter->getFechaNacimiento() << "</li>" << std::endl;
-            outfile << "<li>Curso más alto matriculado: " << iter->getCurso() << "</li>" << std::endl;
+            outfile << "<li>Curso mas alto matriculado: " << iter->getCurso() << "</li>" << std::endl;
             outfile << "<li>Grupo: " << iter->getGrupo() << "</li>" << std::endl;
             outfile << "<li>Lider del grupo: " << (iter->getEsLider()? "Si" : "No") << "</li>" << std::endl;
             outfile << "</ul>" << std::endl << std::endl;

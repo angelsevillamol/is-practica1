@@ -34,27 +34,13 @@ class alumno {
     unsigned getCurso() const { return curso_; }
     unsigned getGrupo() const { return grupo_; }
     bool getEsLider() const { return esLider_; }
-    void setDni(std::string dni) { dni_ = dni;
-                                   assert(dni_.length() == 9);
-                                   for(int i=0 ; i<8 ; i++){
-                                   assert(std::isdigit(dni_[i]));}
-                                   assert(std::isalpha(dni_[8]));}
-    void setNombre(std::string nombre) { nombre_ = nombre;
-                                         for(int i=0 ; i<nombre_.length() ; i++){
-                                         assert(std::isalpha(nombre_[i]));} }
-    void setApellidos(std::string apellidos) { apellidos_ = apellidos;
-                                               for(int i=0 ; i<apellidos_.length() ; i++){
-                                               assert(std::isalpha(apellidos_[i]));} }
-    void setTelefono(std::string telefono) { telefono_ = telefono;
-                                             assert(telefono_.length() == 9);
-                                             for(int i=0 ; i<9 ; i++){
-                                             assert(std::isdigit(telefono_[i]));}}
+    void setDni(std::string dni);
+    void setNombre(std::string nombre);
+    void setApellidos(std::string apellidos);
+    void setTelefono(std::string telefono);
     void setEmail(std::string email) { email_ = email; }
     void setDireccion(std::string direccion) { direccion_ = direccion; }
-    void setFechaNacimiento(std::string fecha_nacimiento) { fechaNacimiento_ = fecha_nacimiento;
-                                                           assert(isdigit(fechaNacimiento_[0,1,3,4,6,7,8,9]));
-                                                           assert(fechaNacimiento_[2]=='/');
-                                                           assert(fechaNacimiento_[5]=='/');}
+    void setFechaNacimiento(std::string fecha_nacimiento);
     void setCurso(unsigned curso) { curso_ = curso;
                                     assert(curso_<=4);}
     void setGrupo(unsigned grupo) { grupo_ = grupo; }
