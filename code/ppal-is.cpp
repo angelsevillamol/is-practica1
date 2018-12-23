@@ -13,8 +13,8 @@
 #include "is.hpp"
 
 #define MAX_ALUMNOS 150
-#define FILE_CREDENCIALES "credenciales.bin"
-#define FILE_BBDD_LOCAL "localdata.bin"
+#define FILE_CREDENCIALES "../data/credenciales.bin"
+#define FILE_BBDD_LOCAL "../data/localdata.bin"
 
 enum MENU_OPTS
 {
@@ -33,6 +33,7 @@ enum MENU_OPTS
 
 void pulseEnter();
 bool acceder(profesor &prof);
+bool registrar(const profesor &prof);
 unsigned escribirMenu(bool esCoordinador);
 void obtenerAlumno(alumno &a);
 void mostrarAlumno(const alumno &a);
@@ -47,7 +48,6 @@ int main(void)
     std::list<alumno> resultado;
     unsigned option;
 
-    /*
     // Inicio de sesión del usuario.
     do {
         b = acceder(prof);
@@ -55,7 +55,7 @@ int main(void)
             std::cout << "Datos erróneos. Por favor, inténtelo otra vez. ";
             pulseEnter();
         }
-    } while (not b); */
+    } while (not b);
 
     do {
         switch(option = escribirMenu(prof.getEsCoordinador())) {
@@ -133,7 +133,7 @@ int main(void)
                 if (prof.getEsCoordinador()) {
                     std::cout << "Indique el nombre de la copia de seguridad: ";
                     std::cin >> stringAux;
-                    prof.getBaseDatos().guardarFichero(stringAux);
+                    prof.getBaseDatos().guardarFichero("../data/" + stringAux + ".bin");
                     std::cout << "Copia de seguridad guardada correctamente. ";
                     pulseEnter();
                 }
@@ -143,7 +143,7 @@ int main(void)
                 if (prof.getEsCoordinador()) {
                     std::cout << "Indique el nombre de la copia de seguridad: ";
                     std::cin >> stringAux;
-                    prof.getBaseDatos().cargarFichero(stringAux);
+                    prof.getBaseDatos().cargarFichero("../data/" + stringAux + ".bin");
                     std::cout << "Datos cargados correctamente. ";
                     pulseEnter();
                 }
@@ -151,7 +151,14 @@ int main(void)
 
             case ADD_PROFESOR:
                 if (prof.getEsCoordinador()) {
-
+                    b = registrar(prof);
+                    if (not b) {
+                        std::cout << "Error al añadir el nuevo usuario. Puede que ya exista. ";
+                    }
+                    else {
+                        std::cout << "Usuario añadido correctamente. ";
+                    }
+                    pulseEnter();
                 }
                 break;
 
@@ -185,6 +192,23 @@ bool acceder(profesor &prof)
     std::cin >> password;
 
     return prof.iniciarSesion(FILE_CREDENCIALES, usuario, password);
+}
+
+bool registrar(const profesor &prof)
+{
+    std::string usuario;
+    std::string password;
+
+    std::system("clear");
+    std::cout << "REGISTRAR USUARIO:" << std::endl;
+
+    std::cout << "\tNombre de usuario: ";
+    std::cin >> usuario;
+
+    std::cout << "\tContraseña: ";
+    std::cin >> password;
+
+    return prof.anadirProfesor(FILE_CREDENCIALES, usuario, password);
 }
 
 // Imprime por pantalla el menu de opciones.
@@ -232,7 +256,8 @@ void obtenerAlumno(alumno &a)
     a.setNombre(aux);
 
     std::cout << "\tApellidos: ";
-    std::cin >> aux;
+    std::cin.ignore();
+    std::getline(std::cin, aux);
     a.setApellidos(aux);
 
     std::cout << "\tTelefono: ";

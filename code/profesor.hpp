@@ -23,12 +23,12 @@ class profesor
     baseDatos bbdd_;
   public:
     profesor();
-    std::string getNombreUsuario() { return nombreUsuario_; }
-    bool getEsCoordinador() { return esCoordinador_; }  //Devuelve si el profesor es coordinador o no.
+    std::string getNombreUsuario() const { return nombreUsuario_; }
+    bool getEsCoordinador() const { return esCoordinador_; }  //Devuelve si el profesor es coordinador o no.
     baseDatos& getBaseDatos() { return bbdd_; }
     bool iniciarSesion(std::string nombreFichero, std::string usuario, std::string password);  //Devuelve si el usuario introducido existe.
     void cerrarSesion();
-    bool anadirProfesor(std::string nombreFichero, std::string usuario, std::string password);  //Añade un profesor ayudante.
+    bool anadirProfesor(std::string nombreFichero, std::string usuario, std::string password) const;  //Añade un profesor ayudante.
 };
 
 #endif // PROFESOR_HPP

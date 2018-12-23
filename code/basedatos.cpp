@@ -14,6 +14,7 @@
 #include "alumno.hpp"
 #include "basedatos.hpp"
 
+
 bool baseDatos::anadirAlumno(const alumno &nuevoAlumno) {
     if (getNumeroAlumnos() >= 150) {
         return false;
@@ -137,22 +138,60 @@ void baseDatos::buscarAlumnos(std::list<alumno> &resultado,
     }
 }
 
-void baseDatos::guardarFichero(std::string nombreFichero) {
-    std::ofstream outfile(nombreFichero, std::ios::binary);
+void baseDatos::guardarFichero(std::string nombreFichero) 
+{
+    std::ofstream outfile(nombreFichero, std::ios::out | std::ios::binary);
     std::list<alumno>::iterator iter;
+    unsigned len;
 
     if (outfile.is_open()) {
         for (iter = alumnos_.begin(); iter != alumnos_.end(); iter++) {
-            outfile << iter->getDni() + ',' 
-                    << iter->getNombre() + ',' 
-                    << iter->getApellidos() + ',' 
-                    << iter->getTelefono() + ','
-                    << iter->getEmail() + ',' 
-                    << iter->getDireccion() + ',' 
-                    << iter->getCurso() + ',' 
-                    << iter->getFechaNacimiento() + ','
-                    << iter->getGrupo() + ',' 
-                    << (iter->getEsLider()? "TRUE" : "FALSE") + '\n';
+            // Escritura del dni.
+            len = iter->getDni().length();
+            outfile.write(reinterpret_cast<char *>(&len), sizeof(unsigned));
+            outfile.write(iter->getDni().c_str(), len);
+
+            // Escritura del nombre.
+            len = iter->getNombre().length();
+            outfile.write(reinterpret_cast<char *>(&len), sizeof(unsigned));
+            outfile.write(iter->getNombre().c_str(), len);
+
+            // Escritura de los apellidos.
+            len = iter->getApellidos().length(); 
+            outfile.write(reinterpret_cast<char *>(&len), sizeof(unsigned));
+            outfile.write(iter->getApellidos().c_str(), len);
+
+            // Escritura del telefono.
+            len = iter->getTelefono().length();
+            outfile.write(reinterpret_cast<char *>(&len), sizeof(unsigned));
+            outfile.write(iter->getTelefono().c_str(), len);
+
+            // Escritura del e-mail.
+            len = iter->getEmail().length();
+            outfile.write(reinterpret_cast<char *>(&len), sizeof(unsigned));
+            outfile.write(iter->getEmail().c_str(), len);
+
+            // Escritura de la direccion postal.
+            len = iter->getDireccion().length();
+            outfile.write(reinterpret_cast<char *>(&len), sizeof(unsigned));
+            outfile.write(iter->getDireccion().c_str(), len);
+
+            // Escritura del curso mas alto matriculado.
+            unsigned curso = iter->getCurso();
+            outfile.write(reinterpret_cast<char *>(&curso), sizeof(unsigned));
+
+            // Escritura de la fecha de nacimiento.
+            len = iter->getFechaNacimiento().length();
+            outfile.write(reinterpret_cast<char *>(&len), sizeof(unsigned));
+            outfile.write(iter->getFechaNacimiento().c_str(), len);
+
+            // Escritura del grupo.
+            unsigned grupo = iter->getGrupo();
+            outfile.write(reinterpret_cast<char *>(&grupo), sizeof(unsigned));
+
+            // Escritura de la condicion de lider.
+            unsigned esLider = iter->getEsLider();
+            outfile.write(reinterpret_cast<char *>(&esLider), sizeof(unsigned));
         }
         
         outfile.close();
@@ -160,7 +199,7 @@ void baseDatos::guardarFichero(std::string nombreFichero) {
 }
 
 void baseDatos::cargarFichero(std::string nombreFichero) {
-    std::ifstream infile(nombreFichero, std::ios::binary);
+    std::ifstream infile(nombreFichero, std::ios::in | std::ios::binary);
     std::string dni; 
     std::string nombre;
     std::string apellidos;
@@ -169,27 +208,60 @@ void baseDatos::cargarFichero(std::string nombreFichero) {
     std::string direccion; 
     std::string fechaNacimiento;
     unsigned curso;
-    unsigned grupo;  
+    unsigned grupo; 
+    unsigned aux;
     bool esLider;
-    std::string aux;
+    unsigned len;
 
     if (infile.is_open()) {
+        // Se eliminan la lista de alumnos previa carga.
         alumnos_.clear();
 
-        while (getline(infile, dni, ',')) {
-            getline(infile, nombre, ',');
-            getline(infile, apellidos, ',');
-            getline(infile, telefono, ',');
-            getline(infile, email, ',');
-            getline(infile, direccion, ',');
-            getline(infile, aux, ',');
-            curso = atoi(aux.c_str());
-            getline(infile, fechaNacimiento, ',');
-            getline(infile, aux, ',');
-            grupo = atoi(aux.c_str());
-            getline(infile, aux);
-            esLider = (aux == "TRUE");
+        while (infile.read(reinterpret_cast<char *>(&len), sizeof(unsigned))) {
+            dni.resize(len);
+            infile.read(&dni[0], dni.size());
 
+            // Lectura del nombre.
+            infile.read(reinterpret_cast<char *>(&len), sizeof(unsigned));
+            nombre.resize(len);
+            infile.read(&nombre[0], nombre.size());
+
+            // Lectura de los apellidos.
+            infile.read(reinterpret_cast<char *>(&len), sizeof(unsigned));
+            apellidos.resize(len);
+            infile.read(&apellidos[0], apellidos.size());
+
+            // Lectura del telefono.
+            infile.read(reinterpret_cast<char *>(&len), sizeof(unsigned));
+            telefono.resize(len);
+            infile.read(&telefono[0], telefono.size());
+
+            // Lectura del e-mail.
+            infile.read(reinterpret_cast<char *>(&len), sizeof(unsigned));
+            email.resize(len);
+            infile.read(&email[0], email.size());
+
+            // Lectura de la direccion postal.
+            infile.read(reinterpret_cast<char *>(&len), sizeof(unsigned));
+            direccion.resize(len);
+            infile.read(&direccion[0], direccion.size());
+
+            // Lectura del curso mas alto matriculado.
+            infile.read(reinterpret_cast<char *>(&curso), sizeof(unsigned));
+
+            // Lectura de la fecha de nacimiento.
+            infile.read(reinterpret_cast<char *>(&len), sizeof(unsigned));
+            fechaNacimiento.resize(len);
+            infile.read(&fechaNacimiento[0], fechaNacimiento.size());
+
+            // Lectura del grupo.
+            infile.read(reinterpret_cast<char *>(&grupo), sizeof(unsigned));
+
+            // Lectura de la condicion de lider.
+            infile.read(reinterpret_cast<char *>(&aux), sizeof(unsigned));
+            esLider = aux;
+
+            // Se añade el alumno a la lista.
             anadirAlumno(dni, nombre, apellidos, telefono, email, 
                 direccion, fechaNacimiento, curso, grupo, esLider);
         }
