@@ -26,6 +26,7 @@ class profesor
     std::string getNombreUsuario() const { return nombreUsuario_; }
     bool getEsCoordinador() const { return esCoordinador_; }  //Devuelve si el profesor es coordinador o no.
     baseDatos& getBaseDatos() { return bbdd_; }
+    const baseDatos& getBaseDatos() const { return bbdd_; }
     bool iniciarSesion(std::string nombreFichero, std::string usuario, std::string password);  //Devuelve si el usuario introducido existe.
     void cerrarSesion();
     bool anadirProfesor(std::string nombreFichero, std::string usuario, std::string password) const;  //Añade un profesor ayudante.

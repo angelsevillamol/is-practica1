@@ -86,9 +86,9 @@ bool baseDatos::eliminarAlumno(std::string dni)
 	return false;
 }
 
-bool baseDatos::getAlumno(std::string dni, alumno &a)
+bool baseDatos::getAlumno(std::string dni, alumno &a) const
 {
-    std::list<alumno>::iterator iter;
+    std::list<alumno>::const_iterator iter;
 
     for (iter = alumnos_.begin(); iter != alumnos_.end(); iter++) {
         if (dni == iter->getDni()) {
@@ -110,9 +110,9 @@ bool baseDatos::getAlumno(std::string dni, alumno &a)
 }
 
 void baseDatos::buscarAlumnos(std::list<alumno> &resultado, 
-    std::string apellidos, std::string dni, unsigned grupo)
+    std::string apellidos, std::string dni, unsigned grupo) const
 {
-    std::list<alumno>::iterator iter;
+    std::list<alumno>::const_iterator iter;
     alumno nuevoAlumno;
 
     resultado.clear();
@@ -138,10 +138,10 @@ void baseDatos::buscarAlumnos(std::list<alumno> &resultado,
     }
 }
 
-void baseDatos::guardarFichero(std::string nombreFichero) 
+void baseDatos::guardarFichero(std::string nombreFichero) const
 {
     std::ofstream outfile(nombreFichero, std::ios::out | std::ios::binary);
-    std::list<alumno>::iterator iter;
+    std::list<alumno>::const_iterator iter;
     unsigned len;
 
     if (outfile.is_open()) {
