@@ -1,0 +1,28 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: is.aux
+A level-1 auxiliary file: analisis.aux
+The style file: plain.bst
+Database file #1: mybib.bib
+Warning--string name "pasp" is undefined
+--line 160 of file mybib.bib
+Warning--empty title in Adler1962
+Warning--empty journal in BergerPACS116
+Warning--empty title in Biersack82
+Warning--empty title in Blaha
+Warning--empty institution in Bos
+Warning--can't use both author and editor fields in Browder
+Warning--empty institution in Chance1
+Warning--empty year in Chance1
+Warning--empty booktitle in CubySPIE3355
+Warning--can't use both author and editor fields in Fugate
+Warning--empty title in Golek
+Warning--empty title in Hase
+Warning--can't use both author and editor fields in Yarkony
+Warning--empty title in Yarkony
+Warning--can't use both author and editor fields in HerringLN
+Warning--can't use both author and editor fields in Hurwitz
+Warning--empty title in Klopper
+Warning--empty school in MasuiMet34
+Warning--can't use both author and editor fields in Nussbaumer
+Warning--empty title in Landolt
+Warning--empty journal in EIS
+(There were 22 warnings)

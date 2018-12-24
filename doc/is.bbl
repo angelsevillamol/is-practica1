@@ -1,0 +1,750 @@
+\begin{thebibliography}{100}
+
+\bibitem{Abate}
+J.~Abate and H.~Dubner.
+\newblock A new method for generating the power series expansions of functions.
+\newblock {\em SIAM J.\ Numer.\ Anal.}, 5(1):102--112, 1968.
+
+\bibitem{AbeAAp374}
+L.~Abe, F.~Vakili, and A.~Boccaletti.
+\newblock The achromatic phase knife coronograph.
+\newblock {\em Astron.\ Astrophys.}, 374(3):1161, 2001.
+
+\bibitem{AS}
+Milton Abramowitz and Irene~A. Stegun, editors.
+\newblock {\em Handbook of Mathematical Functions}.
+\newblock Dover Publications, New York, 9th edition, 1972.
+
+\bibitem{Adler}
+Steven~M. Aderl-Golden, Stephen~R. Langhoff, Charles~W. {Bauschlicher Jr}, and
+  Grad~D. Carney.
+\newblock Theoretical calculation of ozone vibrational infrared intensities.
+\newblock {\em J. Chem.\ Phys.}, 83(1):255--264, 1985.
+
+\bibitem{Adler1962}
+S.~L. Adler.
+\newblock {\em Phys.\ Rev.}, 126:413, 1962.
+
+\bibitem{AkesonSPIE4006}
+Rachel~L. Akeson, Mark~R. Swain, and Mark~M. Colavita.
+\newblock Differential phase technique with the {K}eck interferometer.
+\newblock In Pierre~J. Lena and Andreas Quirrenbach, editors, {\em
+  Interferometry in Optical Astronomy}, volume 4006 of {\em Proc.\ SPIE}, pages
+  321--327. Int.\ Soc.\ Optical Engineering, 2000.
+
+\bibitem{AlbrechtTheoChemAcc107}
+Martin Albrecht.
+\newblock Local-orbital-based correlated ab initio band structure calculations
+  in insulating solids: Lif.
+\newblock {\em Theor.\ Chem.\ Acc.}, 107:71--79, 2002.
+\newblock The last author V. R. Saunders is missing in Ref.\ 36.
+
+\bibitem{AlbrechtSPIE5491}
+Simon Albrecht, Eric~J. Bakker, Jeroen~A. {de Jong}, Robert~N. Tubbs, Jeffrey
+  Meisner, and Rudolf {le Poole}.
+\newblock Calibration of temperature and relative humidity sensors for use on
+  the {VLT}-{I}nterferometer.
+\newblock In Wesley~A. Traub, editor, {\em New Frontiers in Stellar
+  Interferometry}, volume 5491 of {\em Proc.\ SPIE}, pages 1266--1273. Int.\
+  Soc.\ Optical Engineering, 2004.
+
+\bibitem{AlfaroJCompApplMath99}
+Manuel Alfaro, Mar\'{\i}a~Jos\'e Cantero, and Leandro Moral.
+\newblock Semiorthogonal functions and orthogonal polynomials on the unit
+  circle.
+\newblock {\em J. Comp.\ Appl.\ Math.}, 99(1):3--14, 1998.
+
+\bibitem{LAPACK}
+E.~Anderson, Z.~Bai, C.~Bischof, S.~Blackford, J.~Demmel, Jack Dongarra, J.~Du
+  Croz, A.~Greenbaum, S.~Hammarling, A.~McKenney, and D.~Sorensen.
+\newblock {\em {LAPACK} Users' Guide}.
+\newblock Society for Industrial and Applied Mathematics, Philadelphia, PA,
+  third edition, 1999.
+
+\bibitem{AnkerstSIGMOD99}
+Mihael Ankerst, Markus~M. Breunig, Hans-Peter Kriegel, and J\"org Sander.
+\newblock {OPTICS}: Ordering points to identify the clustering structure.
+\newblock In {\em Proc. {ACM} {SIGMOD}'99 Int.\ Conf.\ Management of Data},
+  1999.
+
+\bibitem{Arakane}
+Fusanori Arakane and Osamu Matsuoka.
+\newblock Recurrence formulas for molecular integrals over {L}aguerre
+  {G}aussian-type functions.
+\newblock {\em Int.\ J. Quant.\ Chem.}, 66(4):273--279, 1998.
+
+\bibitem{Archer}
+D.~G. Archer and P.~Wang.
+\newblock The dielectric constant of water and {D}ebye-{H}\"uckel limiting law
+  slopes.
+\newblock {\em J. Phys.\ Chem.\ Ref.\ Data}, 19:371--411, 1990.
+
+\bibitem{Sageatbd}
+{SAGE}~{III} {ATBD}.
+\newblock {SAGE} {III} algorithm theoretical basis document (atbd) water vapor
+  products.
+\newblock Technical report, European Southern Observatory, 18~February 2000.
+\newblock LaRC 475--00--105.
+
+\bibitem{Avila}
+Remy Avila, Elena Masciadri, Leonardo~J. S\'anchez, Jean Vernin, and Alejandro
+  Raga.
+\newblock Vertical distribution of temporal correlation of optical turbulence.
+\newblock In Peter~L. Wizinowich and Domenico Bonaccini, editors, {\em Adaptive
+  Optical System Technologies {II}}, volume 4839 of {\em Proc.\ SPIE}, pages
+  792--800. Int.\ Soc.\ Optical Engineering, 2002.
+
+\bibitem{Baldiniarxiv04}
+A.~Baldini, C.~Bemporad, F.~Cei, T.~Doke, M.~Grassi, T.~Haruyama, S.~Mihara
+  anad T.~Mori, D.~Nicol\'o, H.~Nishiguchi, W.~Ootani, K.~Ozone, A.~Papa,
+  R.~Pazzi, R.~Sawada, F.~Sergiampietri, G.~Signorelli, S.~Suzuki, and
+  K.~Terasawa.
+\newblock Liquid {X}e scintiallation calorimetry and {X}e optical properties.
+\newblock {\em arXiv:physics/040172}, 2004.
+
+\bibitem{BergerPACS116}
+David~B. Berger.
+\newblock Longitudinal dispersion compensation for a long baseline optical
+  interferometer.
+\newblock 116:390--390, 2004.
+
+\bibitem{BergerSPIE4838}
+David~H. Berger, Theo~A. {ten Brummelaar}, William~G. Gagnuolo, and Harold~A.
+  McAlister.
+\newblock Preliminary results from the longitudinal disersion compensation
+  system for the {CHARA} array.
+\newblock In Wesley~A. Traub, editor, {\em Interferometry for Optical Astronomy
+  {II}}, volume 4838 of {\em Proc.\ SPIE}, pages 974--982. Int.\ Soc.\ Optical
+  Engineering, 2003.
+
+\bibitem{Biersack82}
+Jochen~P. Biersack and E.~Santer.
+\newblock {\em Nucl.\ Instrum.\ Methods}, 198:29, 1982.
+
+\bibitem{Blaha}
+Peter Blaha.
+\newblock priv. commun., 1998.
+
+\bibitem{BoettgerPRB62}
+Jonathan~C. Boettger.
+\newblock Approximate two-electron spin-orbit coupling terms for
+  density-functional theory dft calculations using the doublas-kroll-hess
+  transformation.
+\newblock {\em Phys.\ Rev.\ B}, 62:7809--7815, 2000.
+
+\bibitem{Born}
+Max Born and Emil Wolf.
+\newblock {\em Principles of Optics}.
+\newblock Cambridge University Press, Cambridge, 7th edition, 1999.
+
+\bibitem{Bos}
+M.~S. Bos and H.-G. Scherneck.
+\newblock The free ocean tide loading provider.
+\newblock Technical report, 2005.
+
+\bibitem{Bradley1972}
+C.~J. Bradley and Arthur~P. Cracknell.
+\newblock {\em The Mathematical Theory of the Symmetry in Solids}.
+\newblock Clarendon Press, Oxford, 1972.
+
+\bibitem{Browder}
+James~Steve Browder, Stanley~S. Ballard, and Paul Klocek.
+\newblock {\em Physical Properties of Infrared Optical Materials}, chapter~4,
+  pages 402--405.
+\newblock Marcel Dekker, NY, Basel, Hong Kong, 1991.
+
+\bibitem{buscher88}
+D.~F. Buscher.
+\newblock {\em Getting the most out of C.O.A.S.T.}
+\newblock PhD thesis, Cambridge University, 1988.
+
+\bibitem{Byrd}
+Paul~F. Byrd and Morris~D. Friedman.
+\newblock {\em Handbook of elliptical Integrals for Engineers and Physicists},
+  volume LXVII of {\em Die Grundlehren der mathematischen Wissenschaften in
+  Einzeldarstellungen}.
+\newblock Springer, Berlin, G\"ottingen, 2nd edition, 1971.
+
+\bibitem{Callaway}
+Joseph Callaway.
+\newblock {\em Quantum Theory of ths Solid State}.
+\newblock Academic Press, New York, San Francisco, 1976.
+
+\bibitem{Carleer}
+M.~Carleer, A.~Jenouvrier, A.-C. Vandaele, P.~F. Bernath, M.~F. M\'erienne,
+  R.~Colin, N.~F. Zobov, O.~L. Polyansky, J.~Tennyson, and V.~A. Savin.
+\newblock The near infrared, visible and near ultraviolet overtone spectrum of
+  water.
+\newblock {\em J. Chem.\ Phys.}, 111:2444--2450, 1999.
+
+\bibitem{CassaingSPIE4006}
+Fr\'ed\'eric Cassaing, Bruno Fleury, Christophe Coudrain, Pierre-Yves Madec,
+  Emmanuel {Di Folco}, Andreas Glindemann, and Samuel L\'ev{\^e}que.
+\newblock An optimized fringe tracker for the {VLTI}/{PRIMA} instrument.
+\newblock In Pierre~J. Lena and Andreas Quirrenbach, editors, {\em
+  Interferometry in Optical Astronomy}, volume 4006 of {\em Proc.\ SPIE}, pages
+  152--163. Int.\ Soc.\ Optical Engineering, 2000.
+
+\bibitem{Chagnon}
+Gilles Chagnon.
+\newblock {\em Interf\'erom\'etrie stellair dans l'infrarouge en pr\'esence de
+  fon thermnique}.
+\newblock PhD thesis, Observatoire de Paris (section de Meudon), 2003.
+
+\bibitem{Chance1}
+K.~Chance, K.~W. Jucks, D.~G. Johnson, and W.~A. Traub.
+\newblock The smithsonian astrophysical observatory database sao92.
+\newblock Technical report.
+
+\bibitem{ChangSPIE3350}
+M.~P. J.~L. Chang and D.~F. Buscher.
+\newblock Monomode fiber interferometer for single telescopes.
+\newblock In Robert~D. Reasenberg, editor, {\em Astronomical Intererometry},
+  volume 3350 of {\em Proc.\ SPIE}, pages 2--13, Kona, 20--28~March 1998. Int.\
+  Soc.\ Optical Engineering.
+
+\bibitem{Cody}
+W.~J. Cody.
+\newblock A survey of practical rational and polynomial approximation of
+  functions.
+\newblock {\em SIAM Rev.}, 12(3):400--423, 1970.
+
+\bibitem{Cotton-95}
+W.~Cotton.
+\newblock Fringe fitting.
+\newblock In {\em Very Long Baseline Interferometry and the VLBA}, number~82 in
+  ASP Conference Series, pages 189--208. Astronomical Society of the Pacific,
+  1995.
+
+\bibitem{Cotton-97}
+W.~Cotton.
+\newblock Very long baseline interferometry.
+\newblock In {\em High Angular Resolution in Astrophysics}, number 501 in NATO
+  ASI Series. Kluwer Academic Publishers, 1997.
+
+\bibitem{binFITS}
+W.D. Cotton, D.~Tody, and W.D. Pence.
+\newblock {\em Binary Table Extensions to FITS}, 1995.
+
+\bibitem{Cracknell}
+Arthur~P. Cracknell.
+\newblock {\em Group Theory in Solid-State Physics}.
+\newblock Taylor \& Francis, London, 1975.
+
+\bibitem{CreathProgOpt26}
+Katherine Creath.
+\newblock Phase-measuremnt interferometry techniques.
+\newblock In E.~Wolf, editor, {\em TBD}, volume XXVI of {\em Prog.\ Opt.},
+  pages 349--393. TBD, TBD, 1988.
+
+\bibitem{CubySPIE3355}
+J.~G. Cuby, D.~Bottini, and J.~P. Picat.
+\newblock Handling atmospheric dispersion and differential refraction effects
+  in large-field multi-objects spectroscopic observations.
+\newblock volume 3355 of {\em Proc.\ SPIE}, pages 36--47. Int.\ Soc.\ Optical
+  Engineering, 1998.
+
+\bibitem{darcio99}
+L.~A. D'Arcio.
+\newblock {\em Selected aspects of wide-field stellar interferometry}.
+\newblock PhD thesis, Technische Universiteit Delft, 1999.
+
+\bibitem{DerieLC2002}
+Fr\'ed\'eric Derie, F.~Delplancke, Andreas Glindemann, Samuel L\'ev{\^e}que,
+  Serge M\'enardi, Francesco Paresce, Rainer Wilhelm, and Krister Wirenstrand.
+\newblock {PRIMA} technical description and implementation.
+\newblock In {\em Hunting for Planets}, workshop Lorentz Center. Lorentz
+  Center, Leiden University, June 2002.
+
+\bibitem{Derr}
+V.~E. Derr.
+\newblock {\em Atmospheric Handbook: Atmospheric Data Tables Available on
+  Computer Tape}.
+\newblock World Data Center A for Solar-Terrestrial Physics, Boulder, CO, 1984.
+
+\bibitem{Dymond}
+J.~H. Dymond and Eric~Brian Smith.
+\newblock {\em The virial coefficients of pure gases and mixtures}.
+\newblock Clarendon Press, Oxford, 1980.
+
+\bibitem{EngelbergJOSAA21}
+Yaakov~M. Engelberg and Shlomo Ruschiin.
+\newblock Fast method for physica optics propagation of high-numerical-aperture
+  beams.
+\newblock {\em J. Opt.\ Soc.\ Am.\ A}, 21(11):2135--2145, 2004.
+
+\bibitem{Erickson}
+K.~E. Erickson.
+\newblock Investigation of the invariance of atmospheric dispersion with a
+  long-path refractometer.
+\newblock {\em J.\ Opt.\ Soc.\ Am.}, 52(7):777--780, 1962.
+
+\bibitem{EsterKDD96}
+Martin Ester, Hans-Pter Kriegel, J\"org Sander, and Xiaowei Xu.
+\newblock A density-based algorithm for discovering clusters in large spatial
+  databases with noise.
+\newblock In {\em Proc. 2nd Int Conf Konwledge Discovery and Data Mining
+  (KDD-96)}, 1996.
+
+\bibitem{Evarestov}
+R.~A. Evarestov and V.~P. Smirnov.
+\newblock {\em Site Symmetry in Crystals}, volume 108 of {\em Springer Series
+  in Solid State Sciences}.
+\newblock Springer, Berlin, Heidelberg, 1993.
+
+\bibitem{Fliege}
+J\"org Fliege and Ulrike Maier.
+\newblock The distribution of points on the sphere and corresponding cubature
+  formulae.
+\newblock {\em IMA J.\ Numer.\ Analysis}, 19(3):317--334, 1999.
+
+\bibitem{Fugate}
+R.\~Q.\ Fugate.
+\newblock {\em Adaptive Optics}, volume III, pages 1.3--1.52.
+\newblock McGraw-Hill, New York, 2001.
+
+\bibitem{GaiWN041210}
+Mario Gai.
+\newblock {PRIMA} {FSU}---effects of residual atmospheric turbulence on {GD}
+  measurement.
+\newblock {WN041210}, 10~December 2004.
+
+\bibitem{GlindemannASS286}
+A.~Glindemann, J.~Algomedo, R.~Amestica, P.~Ballester, B.~Bauvir,
+  E.~Bugue{\~n}o, S.~Correia, F.~Delgado, F.~Delplancke, F.~Derie, Ph. Duhoux,
+  E.~{di Folco}, A.~Gennai, B.~Gilli, P.~Giordano, Ph. Gitton, S.~Guisard,
+  N.~Housen, A.~Huxley, P.~Kervella, M.~Kiekebusch, B.~Koehler, S.~L\'ev\^eque,
+  A.~Longinotti, S.~M\'enardi, S.~Morel, F.~Paresce, T.~{Phan Duc},
+  A.~Richichi, M.~Sch\"oller, M.~Tarenghi, A.~Wallander, M.~Wittkowski, and
+  R.~Wilhelm.
+\newblock The {VLTI}---a status report.
+\newblock {\em Astrophysics and Space Science}, 286(1--2):35--44, 2003.
+
+\bibitem{GlogeAO10}
+D.~Gloge.
+\newblock Weakly guiding fibers.
+\newblock {\em Appl.\ Opt.}, 10(10):2252--2258, 1971.
+
+\bibitem{Golek}
+F.~Golek.
+\newblock {\em Phys.\ Status Solidi B}, 177:K5, 1993.
+
+\bibitem{GorhamSPIE3350}
+P.~W. Gorham.
+\newblock Optimal filter approach to photon-limited white light fringe
+  detection and delay rate estimation in an optical interferometer.
+\newblock In Robert~D. Reasenberg, editor, {\em Astronomical Intererometry},
+  volume 3350 of {\em Proc.\ SPIE}, pages 116--127, Kona, 20--28~March 1998.
+  Int.\ Soc.\ Optical Engineering.
+
+\bibitem{GR}
+I.~Gradstein and I.~Ryshik.
+\newblock {\em Summen-, {P}rodukt- und {I}ntegraltafeln}.
+\newblock Harri Deutsch, Thun, 1st edition, 1981.
+\newblock The numerator of the definition of $\alpha$ in 2.597 should read
+  $\sqrt{1+p^2}\sin x$, not $\sqrt{1+p^2\sin x}$.
+
+\bibitem{Green1985}
+Robin~M. Green.
+\newblock {\em Spherical Astronomy}.
+\newblock Cambridge University Press, Cambridge, London, 1985.
+
+\bibitem{Hahn}
+Theo Hahn, editor.
+\newblock {\em International Tables for Crystallography}, volume~A.
+\newblock Kluwer Academic Publishers, Dordrecht, The Netherlands, 2002.
+
+\bibitem{HardySymp1998}
+Bob Hardy.
+\newblock Its-90 formulations for vapor pressure, frostpoint temperature,
+  dewpoint temperature, and enhancement factors in the range -100 to +100 c.
+\newblock In {\em Proc.\ Third Int.\ Symp.\ on Humidity \& Moisture},
+  Teddington, London, 6~April 1998.
+
+\bibitem{Hase}
+Frank Hase.
+\newblock priv.\ commun., 2003.
+
+\bibitem{Hasegawa1983}
+Takemitsu Hasegawa, Tatsuo Torii, and Ichizo Ninomiya.
+\newblock Generalized {C}hebyshev interpolation and its application to
+  automatic quadrature.
+\newblock {\em Math.\ Comp.}, 41(164):537--553, 1983.
+
+\bibitem{Heidmann}
+Paul~Scott Heidmann.
+\newblock {\em The performance of the epsilon and theta convergence
+  acceleration algorithms}.
+\newblock PhD thesis, North Dakota State University of Agriculture and Applied
+  Science, 1992.
+
+\bibitem{Helgaker}
+T.~Helgaker and P.~R. Taylor.
+\newblock On the evaluation of derivatives of {G}aussian integrals.
+\newblock {\em Theor.\ Chim.\ Acta}, 83(3/4):177--183, 1992.
+
+\bibitem{Yarkony}
+T.~Helgaker and P.~R. Taylor.
+\newblock page chapt.\ 12.
+\newblock World Scientific, Singapore, 1995.
+
+\bibitem{HerringLN}
+C.~Herring.
+\newblock {\em Accidental Degeneracy in the Energy Bands of Crystals}, pages
+  240--248.
+\newblock Lecture Notes and Supplements in Physics. W. A. Benjamin, New York,
+  Amsterdam, 1964.
+
+\bibitem{Hog}
+Erik H\/og and P.~Kenneth Seidelmann, editors.
+\newblock {\em Astronomy and Astrophysics objectives of sub-milliarcsecond
+  optical astrometry}, volume 166 of {\em IAU Symposium}.
+\newblock Kluwer, Dordrecht, 1995.
+
+\bibitem{HogenhuisSPIE4006}
+Harm Hogenhuis, Martijn Visser, Gustav Ruwiel, Frans Hommes, Arno Wielders, and
+  Arjan Couwenberg.
+\newblock Test results of the {VLTI} delay line verification program.
+\newblock In Pierre~J. Lena and Andreas Quirrenbach, editors, {\em
+  Interferometry in Optical Astronomy}, volume 4006 of {\em Proc.\ SPIE}, pages
+  198--206. Int.\ Soc.\ Optical Engineering, 2000.
+
+\bibitem{Hurwitz}
+Adolf Hurwitz and R.~Courant.
+\newblock {\em Allgemeine {F}unktionentheorie und elliptische {F}unktionen},
+  volume~3 of {\em Die {G}rundlehren der {M}athematischen {W}issenschaften in
+  {E}inzeldarstellungen}.
+\newblock Springer, Berlin, G\"ottingen, 4th edition, 1964.
+
+\bibitem{IdsoJGR74}
+Sherwood~B. Idso and Ray~D. Jackson.
+\newblock Thermal radiation from the atmopshere.
+\newblock {\em J. Geophys.\ Res.}, 74(23):5397--5403, 1969.
+
+\bibitem{Iliev}
+A.~I. Iliev and Kh.~I. Semerdzhiev.
+\newblock Some generalizations of the {C}hebychev method for simultaneous
+  determination of all roots of polynomial equations.
+\newblock {\em arXiv:math.NA/0104280}, 2001.
+
+\bibitem{Ince1956}
+E.~C. Ince.
+\newblock {\em Ordinary Differential Equations}.
+\newblock Dover Publications, Dover, 1956.
+
+\bibitem{JacquinetJQSRT62}
+N.~Jacquinet-Husson, E.~Ari\'e, J.~Ballard, A.~Barbe, G.~Bjoraker, B.~Bonnet,
+  L.~R. Brown, C.~Camy-Peyret, J.~P. Champion, A.~Ch\'edin, A.~Chursin,
+  C.~Clerbaux, G.~Duxbury, J.-M. Flaud, N.~Fourri\'e, A.~Fayt, G.~Graner,
+  R.~Gamache, A.~Goldman, Vl. Golovko, G.~Guelachvili, J.~M. Hartmann, J.~C.
+  Hilico, J.~Hillmann, G.~Lef\`evre, E.~Lellouch, S.~N. Mikha\"{\i}lenko, O.~V.
+  Naumenko, V.~Nemtchinov, D.~A. Newnham, A.~Nikitin, J.~Orphal, A.~Perrin,
+  D.~C. Reuter, C.~P. Rinsland, L.~Rosenmann, L.~S. Rothman, N.~A. Scott,
+  J.~Selby, L.~N. Sinitsa, J.~M. Sirota, A.~M. Smith, K.~M. Smith, Vl.~G.
+  Tyuereve, R.~H. Tipping, S.~Urband, P.~Varanasi, and M.~Weber.
+\newblock The 1997 spectroscopic {GEISA} databank.
+\newblock {\em J.\ Quant.\ Spectr.\ \& Radiat.\ Transfer}, 62(2):205--254,
+  1999.
+
+\bibitem{Karttunen}
+H.~Karttunen, P.~Kr\"oger, H.~Oja, M.~Poutanen, and K.~J. Donner, editors.
+\newblock {\em Fundamental Astronomy}.
+\newblock Springer, Berlin, Heidelberg, 1987.
+
+\bibitem{Khare}
+Avinash Khare and Uday Sukhatme.
+\newblock Generalized landen transformation formulas for jacobi elliptic
+  functions.
+\newblock {\em arXiv:math-ph/0312074}, 2003.
+
+\bibitem{Kilbas}
+Anatoly~A. Kilbas, Luis Rodr\'{\i}guez, and Juan~J. Trujillo.
+\newblock Asymptotic representations for hypergeometric-{B}essel type function
+  and fractional integrals.
+\newblock {\em J.\ Comput.\ Appl.\ Math.}, 149(2):469--487, 2002.
+
+\bibitem{Klopper}
+W.~Klopper and R.~R\"ohse.
+\newblock {\em Theor.\ Chim.\ Acta}, 83:441, 1992.
+
+\bibitem{Knopp}
+Konrad Knopp.
+\newblock {\em Theorie und {A}nwendung der unendlichen {R}eihen}, volume~2 of
+  {\em Die {G}rundlehren der {M}athematischen {W}issenschaften in
+  {E}inzeldarstellungen}.
+\newblock Springer, Berlin, G\"ottingen, 5 edition, 1964.
+
+\bibitem{KoehlerSPIE5491}
+B.~Koehler, M.~Kraus, J.~M. Moresmau, K.~Wirenstrand, M.~Duchateau, P.~Duhoux,
+  R.~Karban, C.~Flebus, E.~Gabriel, and O.~Pirnay.
+\newblock The vlti auxiliary telescopes; commissioning of at1.
+\newblock In Wesley~A. Traub, editor, {\em New Frontiers in Stellar
+  Interferometry}, volume 5491 of {\em Proc.\ SPIE}, pages 600--610. Int.\
+  Soc.\ Optical Engineering, 2004.
+
+\bibitem{KoehlerSPIE4006}
+Bertrand Koehler and Carlo Flebus.
+\newblock {VLTI} auxiliary telescopes.
+\newblock In Pierre~J. Lena and Andreas Quirrenbach, editors, {\em
+  Interferometry in Optical Astronomy}, volume 4006 of {\em Proc.\ SPIE}, pages
+  13--24. Int.\ Soc.\ Optical Engineering, 2000.
+
+\bibitem{LaiJOSAA8}
+Guanming Lai and Toyohiko Yatagai.
+\newblock Generalized phase-shifting interferomtry.
+\newblock {\em J.\ Opt. Soc.\ Am.\ A}, 8(5):822--827, 1991.
+
+\bibitem{SPIE400605}
+C.~Leinert, U.~Graser, L.~B. F.~M. Waters, et~al.
+\newblock 0 $\mu$m interferometry on the vlti with the midi instrument: a
+  preview.
+\newblock In {\em Intern.\ Symp.\ Astronomical Telescopes and Instrumentation},
+  number 4006 in Proc. SPIE, pages 43--53, Munich, 27--31~March 2000.
+
+\bibitem{ASILXXIV}
+M.~Lesieur, A~Yaglu, and F.~David, editors.
+\newblock {\em New Trends in Turbulence}.
+\newblock Number LXXIV in NATO Advanced Study Institute. Springer, Berlin,
+  2000.
+
+\bibitem{Levthesis}
+S.~L\'ev\^eque.
+\newblock {\em M\'ethode et syst\`emes Laser pour l'analyse du trajet optique
+  interne du tr\`es grand t\'elescope interferom\`etrique europ\`een VLTI}.
+\newblock PhD thesis, Universit\'e Louis Pasteur, Strasbourg, 15~December 1997.
+
+\bibitem{LordNASA1992}
+Steven~D. Lord.
+\newblock A new software tool for computing earth's atmospheric transmission of
+  near- and far-infrared radiation.
+\newblock {NASA} Technical Memorandum 103957, {NASA}, 1992.
+
+\bibitem{LukasPhd}
+Dirk Lukas.
+\newblock {\em Ein quantenmechanischer und ortsraumnaher Ansatz f\"ur die
+  dielektrische Matrix eines halbunendlichen Kristalls mit realistischer
+  Oberfl\"ache}.
+\newblock PhD thesis, Christian-Albrechts-Universit\"at Kiel, 1996.
+
+\bibitem{MO}
+Wilhelm Magnus, Fritz Oberhettinger, and Raj~Pal Soni, editors.
+\newblock {\em Formulas and Theorems for the Special Functions of Mathematical
+  Physics}, volume~52 of {\em Die Grundlehren der mathematischen Wissenschaften
+  in Einzeldarstellungen}.
+\newblock Springer, Berlin, Heidelberg, 3rd edition, 1966.
+
+\bibitem{Martensen}
+Erich Martensen.
+\newblock {\em Analysis II}, volume 833 of {\em B I Hoch\-schul\-skrip\-ten}.
+\newblock Biblio\-gra\-phi\-sches In\-sti\-tut, Mannheim, 1969.
+
+\bibitem{MassonASP59}
+Colin~R. Masson.
+\newblock Atmospheric effects and calibrators.
+\newblock In M.~Ishiguro and Wm.~J. Welch, editors, {\em Astronomy with
+  Millimeter and Submillimeter Wave Interferometry}, volume~59 of {\em ASP
+  Conf.\ Ser.}, pages 87--95. Astron.\ Soc.\ Pacific, 1994.
+
+\bibitem{MasuiMet34}
+R.~Masui.
+\newblock {\em Effect of diffraction in a Saunders-type optical
+  interferometer}.
+\newblock PhD thesis, 1997.
+
+\bibitem{MatharPhd}
+Richard~J. Mathar.
+\newblock {\em Dielektrische {T}heorie des elektronischen {E}nergieverlustes
+  schwerer {I}onen in {F}estk\"orpern}.
+\newblock PhD thesis, Technische {U}niversit\"at Dresden, 1995.
+
+\bibitem{MatharREDS145}
+Richard~J. Mathar.
+\newblock Protons passing through the homogeneous electron gas: polarization
+  currents, velocities of excited electrons and deposited energy density.
+\newblock {\em Rad\. Eff.\ Def.\ Sol.}, 145:191--211, 1998.
+
+\bibitem{MatharDia}
+Richard~J. Mathar.
+\newblock Electronic stopping and momentum density of diamond obtained from
+  first-principles calculations.
+\newblock {\em arXiv:cond-mat/0007153}, 2000.
+
+\bibitem{MatharPRB51a}
+Richard~J. Mathar and Matthias Posselt.
+\newblock Effective-charge theory for the electronic stopping of heavy ions in
+  solids: Stripping criteria and target-electron models.
+\newblock {\em Phys.\ Rev.\ B}, 51(1):107--116, 1995.
+
+\bibitem{MatharPRB51b}
+Richard~J. Mathar and Matthias Posselt.
+\newblock Electronic stopping of heavy ions in the kaneko model.
+\newblock {\em Phys.\ Rev.\ B}, 51(22):15798--15807, 1995.
+
+\bibitem{MatharAQC45}
+Richard~J. Mathar, Samuel~B. Trickey, and John~R. Sabin.
+\newblock Electronic stopping and momentum density of diamond from
+  first-principles treatment of the microscopic dielectric.
+\newblock In Remigio Trujillo-Cabrera and John~R. Sabin, editors, {\em Theory
+  of the Interaction of Swift ions with Matter, Vol.\ 1}, volume~45 of {\em
+  Advances in Quantum Chemistry}, pages 277--288. Academic Press, New York,
+  2004.
+
+\bibitem{McCarthyIERS32}
+Dennis~D. McCarthy and G\'erard Petit.
+\newblock {IERS} technical note no 32.
+\newblock Technical report, {IERS} Convention Centre, 2003.
+\newblock http://www.iers.org/iers/publications/tn/tn32/.
+
+\bibitem{MeisnerPhd}
+Jeffrey Meisner.
+\newblock {\em Estimation and Tracking of Atmospheric Delay Noise in a
+  Long-Baseline Optical Stellar Interferometer and Determination of the
+  Expected Estimation Error}.
+\newblock PhD thesis, University of Minnesota, 1995.
+
+\bibitem{Messiah}
+Albert Messiah.
+\newblock {\em Quantenmechanik}, volume~1.
+\newblock Walter de Gruyter, Berlin, New York, 1976.
+
+\bibitem{Moran-76}
+J.~Moran.
+\newblock {\em Very Long Baseline Interferometric Observations and Data
+  Reduction}, pages 235--7.
+\newblock Academic Press, 1976.
+
+\bibitem{Nitsche}
+Johannes C.~C. Nitsche.
+\newblock {\"U}ber die {A}bh\"angigkeit der {T}schebyscheffschen
+  {A}pproximierenden einer differenzierbaren {F}unktion vom {I}ntervall.
+\newblock {\em Numer.\ Math.}, 4:262--276, 1962.
+
+\bibitem{Nussbaumer}
+Henri~J. Nussbaumer.
+\newblock {\em Fast {F}ourier Transform and Convolution Algorithms}, volume~2
+  of {\em Springer Series in Information Sciences}.
+\newblock Springer, Berlin, Heidelberg, New York, 1981.
+
+\bibitem{PartrMemo}
+H.~Partridge.
+\newblock {\em NASA Technical Memorandum 1.15:101044}.
+\newblock Ames Research Center, Moffett Field, 1989.
+
+\bibitem{Peetz}
+J\"org-Volker Peetz.
+\newblock {\em Full-Potential Low-Energy Electron Diffraction Applied to
+  {G}a{A}s(110)}.
+\newblock PhD thesis, Chistian-Albrechts-Universit\"at Kiel, 1998.
+
+\bibitem{Landolt}
+W.~Pies and A.~Weiss.
+\newblock volume III/7a of {\em Zahlenwerte und Funk\-ti\-onen aus
+  Na\-tur\-wissen\-schaf\-ten und Tech\-nik, Neue Serie}, chapter 1.1, page~1.
+\newblock Springer, Berlin, 1973.
+
+\bibitem{PorroASP194}
+Irene~L. Porro, U.~Graser, and Christoph Leinert.
+\newblock Estimated performance for 10-micron interferometry at the {VLTI} with
+  the {MIDI} instrument.
+\newblock In {\em Optical and {IR} Interferometry from Ground and Space},
+  number 194 in ASP Conference Series, pages 325--330. Astronomical Society of
+  the Pacific, 1999.
+
+\bibitem{Press}
+William~H. Press, Saul~A. Teukolsky, William~T. Vetterling, and Brian~P.
+  Flannery.
+\newblock {\em Numerical Recipes in {C}++}.
+\newblock Cambridge University Press, Cambridge, 2nd edition, 2002.
+
+\bibitem{Globalview}
+Cooperative Atmospheric Data~Integration Project.
+\newblock {GLOBALVIEW}-{CO}$_2$.
+\newblock Technical report, Cooperative Atmospheric Data Integration Project --
+  Carbon Dioxide, 2003.
+\newblock ftp://ftp.cmdl.noaa.gov/ccg/co2/GLOBALVIEW.
+
+\bibitem{Rivlin}
+Theodore~J. Rivlin.
+\newblock {\em The {C}hebyshev {P}olynomials}.
+\newblock Pure and Applied Mathematics. John Wiley, New York, London, 1974.
+
+\bibitem{RoddierProgOpt19}
+F.~Roddier.
+\newblock The effects of atmospheric turbulence in optical astronomy.
+\newblock In E.~Wolf, editor, {\em TBD}, volume XIX of {\em Prog.\ Opt.}, pages
+  281--376. TBD, TBD, 1981.
+
+\bibitem{Royer}
+Fr\'ed\'eric Royer.
+\newblock {\em Contribution \'a l'\'etude des populations d'\'etoiles chaudes
+  \'a grande vitesse observ\'ees par Hipparcos}.
+\newblock PhD thesis, Observatoire de Paris {DASGAL}, 1999.
+
+\bibitem{RuegerIAG1999}
+J.~M. R\"ueger.
+\newblock Report of the ad-hoc working party on ``refractive indices of light,
+  infrared and radio waves in the atmosphere'' of the {IAG} special commission
+  {SC3}--fundamental constants ({SCFC}).
+\newblock Technical report, International Association of Geodesy, 1999.
+
+\bibitem{Sarazin}
+Marc Sarazin.
+\newblock Astroclimatology of paranal.
+\newblock Technical report, European Southern Observatory, 2003.
+
+\bibitem{SawadaLNCS2517}
+Jun Sawada and Ruben Gamboa.
+\newblock Mechanical verification of a square root algorithm using taylor's
+  theorem.
+\newblock In M.~D. Aagaard and J.~W. O'Leary, editors, {\em Formal Methods in
+  Computer-Aided Design: 4th International Conference, FMCAD 2002, Portland,
+  OR, USA, November 6--8, 2002}, volume 2517 of {\em Lecture Notes in Computer
+  Science}, pages 274--291. Springer, Berlin, Heidelberg, 2003.
+
+\bibitem{EIS}
+Neil J.~A. Sloane.
+\newblock The on-line encyclopedia of integer sequences.
+\newblock 2003.
+
+\bibitem{StrohbeinProgOpt9}
+John~W. Strohbein.
+\newblock Optical propagation through the turbulent atmosphere.
+\newblock In E.~Wolf, editor, {\em TBD}, volume~IX of {\em Prog.\ Opt.}, pages
+  73--122. TBD, TBD, 1971.
+
+\bibitem{Taff}
+Laurence~G. Taff, editor.
+\newblock {\em Computational Spherical Astronomy}.
+\newblock Wiley, New York, Rochester, 1980.
+
+\bibitem{TangoProgOpt17}
+William~J. Tango and R.~Q. Twiss.
+\newblock Michelson stellar interferometry.
+\newblock In E.~Wolf, editor, {\em TBD}, volume~17 of {\em Prog.\ Opt.}, pages
+  239--277. TBD, TBD, 1980.
+
+\bibitem{Tatulli04}
+Eric Tatulli.
+\newblock {\em Traitement du signal en interf\'erom\'etri monomode dans le
+  cadre du projet {AMBER}. Application \'a l'observation interf\'erom\'etrique
+  de l'environment circumstellaire des \'etoilse jeunes.}
+\newblock PhD thesis, Universit\'e Joseph Fourier, Grenoble, 2004.
+
+\bibitem{vlt157530001}
+Robert~N. Tubbs and Richard~J. Mathar.
+\newblock {\em Astrometric Survey for Extra-Solar Planets with PRIMA, Error
+  Budget for Astrometry}, 18~February 2005.
+\newblock {VLT-TRE-AOS-15753-0001}.
+
+\bibitem{Wolfl}
+William~L. Wolfl and George~J. Zissis, editors.
+\newblock {\em The Infrared Handbook}.
+\newblock Office of Naval Research, Washington DC, 3rd edition, 1989.
+
+\bibitem{ZeissMP30}
+G.~D. Zeiss and William~J. Meath.
+\newblock The h$_2$-h$_2$o dispersion energy constant and the dispersion of the
+  specific refractivity of dilute water vapor.
+\newblock {\em Mol.\ Phys.}, 30(1):161--169, 1975.
+
+\end{thebibliography}

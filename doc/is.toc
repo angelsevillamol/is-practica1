@@ -1,0 +1,53 @@
+\select@language {spanish}
+\contentsline {chapter}{\numberline {1}An\IeC {\'a}lisis de Requisitos}{1}
+\contentsline {section}{\numberline {1.1}An\IeC {\'a}lisis funcional}{1}
+\contentsline {subsection}{\numberline {1.1.1}Identificaci\IeC {\'o}n de actores del Sistema}{1}
+\contentsline {subsection}{\numberline {1.1.2}Datos}{1}
+\contentsline {subsection}{\numberline {1.1.3}Requisitos}{1}
+\contentsline {subsubsection}{Requisitos funcionales}{1}
+\contentsline {subsubsection}{Requisitos no funcionales}{2}
+\contentsline {section}{\numberline {1.2}Historias de usuario}{4}
+\contentsline {subsection}{\numberline {1.2.1}HU-1 A\IeC {\~n}adir alumno}{4}
+\contentsline {subsection}{\numberline {1.2.2}HU-2 Modificar alumnos}{5}
+\contentsline {subsection}{\numberline {1.2.3}HU-3 Eliminar alumnos}{5}
+\contentsline {subsection}{\numberline {1.2.4}HU-4 Buscar alumnos}{5}
+\contentsline {subsection}{\numberline {1.2.5}HU-5 Mostrar alumnos}{6}
+\contentsline {subsection}{\numberline {1.2.6}HU-7 Cargar fichero}{6}
+\contentsline {subsection}{\numberline {1.2.7}HU-8 Identificar Profesor}{6}
+\contentsline {subsection}{\numberline {1.2.8}HU-9 A\IeC {\~n}adir Profesor}{7}
+\contentsline {section}{\numberline {1.3}Casos de uso}{7}
+\contentsline {subsection}{\numberline {1.3.1}CU-1 A\IeC {\~n}adir alumno}{7}
+\contentsline {subsection}{\numberline {1.3.2}CU-2 Modificar alumno}{8}
+\contentsline {subsection}{\numberline {1.3.3}CU-3 Eliminar alumno}{9}
+\contentsline {subsection}{\numberline {1.3.4}CU-4 Buscar alumnos}{9}
+\contentsline {subsection}{\numberline {1.3.5}CU-5 Mostrar alumnos}{10}
+\contentsline {subsection}{\numberline {1.3.6}CU-6 Guardar fichero}{10}
+\contentsline {subsection}{\numberline {1.3.7}CU-7 Cargar fichero}{11}
+\contentsline {subsection}{\numberline {1.3.8}CU-8 Identificar profesor}{11}
+\contentsline {subsection}{\numberline {1.3.9}CU-9 A\IeC {\~n}adir profesor}{12}
+\contentsline {chapter}{\numberline {2}Dise\IeC {\~n}o del sistema}{13}
+\contentsline {section}{\numberline {2.1}Diagrama de clases}{13}
+\contentsline {section}{\numberline {2.2}Diagramas de secuencia}{14}
+\contentsline {subsection}{\numberline {2.2.1}Diagrama de secuencia. A\IeC {\~n}adir alumno}{14}
+\contentsline {subsection}{\numberline {2.2.2}Diagrama de secuencia. Modificar alumno}{15}
+\contentsline {subsection}{\numberline {2.2.3}Diagrama de secuencia. Eliminar alumno}{15}
+\contentsline {subsection}{\numberline {2.2.4}Diagrama de secuencia. Buscar alumnos}{16}
+\contentsline {subsection}{\numberline {2.2.5}Diagrama de secuencia. Mostrar alumnos}{17}
+\contentsline {subsection}{\numberline {2.2.6}Diagrama de secuencia. Guardar fichero}{18}
+\contentsline {subsection}{\numberline {2.2.7}Diagrama de secuencia. Cargar fichero}{18}
+\contentsline {subsection}{\numberline {2.2.8}Diagrama de secuencia. Identificar profesor}{19}
+\contentsline {subsection}{\numberline {2.2.9}Diagrama de secuencia. A\IeC {\~n}adir profesor}{19}
+\contentsline {chapter}{\numberline {3}Implementaci\IeC {\'o}n y pruebas}{20}
+\contentsline {section}{\numberline {3.1}SCRUM}{20}
+\contentsline {subsection}{\numberline {3.1.1}Product Backlog}{20}
+\contentsline {subsection}{\numberline {3.1.2}Sprint Backlog}{21}
+\contentsline {subsection}{\numberline {3.1.3}Burndown Chart}{21}
+\contentsline {section}{\numberline {3.2}C\IeC {\'o}digo}{22}
+\contentsline {subsection}{\numberline {3.2.1}alumno}{22}
+\contentsline {subsection}{\numberline {3.2.2}baseDatos}{26}
+\contentsline {subsection}{\numberline {3.2.3}profesor}{34}
+\contentsline {subsection}{\numberline {3.2.4}is}{39}
+\contentsline {subsection}{\numberline {3.2.5}ppal-is}{40}
+\contentsline {section}{\numberline {3.3}T\IeC {\'e}cnicas de validaci\IeC {\'o}n}{54}
+\contentsline {subsection}{\numberline {3.3.1}Matriz de correspondencia RF/Casos de Uso}{54}
+\contentsline {subsection}{\numberline {3.3.2}Matriz de correspondencia CU/Clases}{54}
