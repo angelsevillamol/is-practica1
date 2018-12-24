@@ -11,6 +11,8 @@
 #define ALUMNO_HPP
 
 #include <string>
+#include <assert.h>
+#include <ctype.h>
 
 /**
  * @brief Almacena la información de un alumno de la Universidad de Córdoba.
@@ -18,9 +20,9 @@
 class alumno {
   public:
     alumno();
-    alumno(std::string dni, std::string nombre, std::string apellidos, 
-           std::string telefono, std::string email, std::string direccion, 
-           std::string fecha_nacimiento, unsigned curso, unsigned grupo = 0, 
+    alumno(std::string dni, std::string nombre, std::string apellidos,
+           std::string telefono, std::string email, std::string direccion,
+           std::string fecha_nacimiento, unsigned curso, unsigned grupo = 0,
            bool esLider = false);
     std::string getDni() const { return dni_; }
     std::string getNombre() const { return nombre_; }
@@ -32,14 +34,15 @@ class alumno {
     unsigned getCurso() const { return curso_; }
     unsigned getGrupo() const { return grupo_; }
     bool getEsLider() const { return esLider_; }
-    void setDni(std::string dni) { dni_ = dni; }
-    void setNombre(std::string nombre) { nombre_ = nombre; }
-    void setApellidos(std::string apellidos) { apellidos_ = apellidos; }
-    void setTelefono(std::string telefono) { telefono_ = telefono; }
+    void setDni(std::string dni);
+    void setNombre(std::string nombre);
+    void setApellidos(std::string apellidos);
+    void setTelefono(std::string telefono);
     void setEmail(std::string email) { email_ = email; }
     void setDireccion(std::string direccion) { direccion_ = direccion; }
-    void setFechaNacimiento(std::string fecha_nacimiento) { fechaNacimiento_ = fecha_nacimiento; }
-    void setCurso(unsigned curso) { curso_ = curso; }
+    void setFechaNacimiento(std::string fecha_nacimiento);
+    void setCurso(unsigned curso) { curso_ = curso;
+                                    assert(curso_<=4);}
     void setGrupo(unsigned grupo) { grupo_ = grupo; }
     void setEsLider(bool esLider) { esLider_ = esLider; }
 

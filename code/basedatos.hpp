@@ -20,7 +20,7 @@ private:
   std::list<alumno> alumnos_;
 
 public:
-  unsigned getNumeroAlumnos() {return alumnos_.size(); }
+  unsigned getNumeroAlumnos() const {return alumnos_.size(); }
   bool anadirAlumno(const alumno &nuevoAlumno);
   bool anadirAlumno(std::string dni, std::string nombre, std::string apellidos, 
       std::string telefono, std::string email, std::string direccion, 
@@ -28,9 +28,10 @@ public:
   bool modificarAlumno(std::string dni, alumno alumno);
   bool eliminarAlumno(std::string dni);
   void borrarAlumnos() { alumnos_.clear(); }
-  bool getAlumno(std::string dni, alumno &a);
-  void buscarAlumnos(std::list<alumno> &resultado, std::string apellidos = "", std::string dni = "", unsigned grupo = 0);
-  void guardarFichero(std::string nombreFichero);
+  bool getAlumno(std::string dni, alumno &a) const;
+  void buscarAlumnos(std::list<alumno> &resultado, std::string apellidos = "", 
+       std::string dni = "", unsigned grupo = 0) const;
+  void guardarFichero(std::string nombreFichero) const;
   void cargarFichero(std::string nombreFichero); 
 };
 

@@ -1,0 +1,79 @@
+% Stanford University PhD thesis style -- modifications to the report style
+% This is unofficial so you should always double check against the
+% Registrar's office rules
+% See http://library.stanford.edu/research/bibliography-management/latex-and-bibtex
+% 
+% Example of use below
+% See the suthesis-2e.sty file for documentation
+%
+\documentclass{report}
+\usepackage{suthesis-2e}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{nccmath}
+\usepackage{bm}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{listingsutf8}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{forest}
+\usepackage[flushleft]{threeparttable}
+\usepackage{cases}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{nicefrac}
+\usepackage{booktabs,tabularx}
+\usepackage{tikz}
+\usetikzlibrary{trees}
+\tikzstyle{every node}=[draw=black,thick,anchor=west, minimum height=2.5em]
+\renewcommand{\tabularxcolumn}{m}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\graphicspath{ {./} }
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+	language=C++,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3,
+	inputencoding=utf8/latin1,
+	extendedchars=true,
+	literate={á}{{\'a}}1 {ã}{{\~a}}1 {é}{{\'e}}1,
+}
+
+
+\dept{Computer Science}
+
+\begin{document}
+	\title{Documentación del sistema software \\
+	de gestión de alumnos}
+	\author{Grupo 6 \\
+	Ortega León, Daniel\\
+	Pérez Hernández, Julen\\
+	Sevilla Molina, Ángel}
+ 
+\beforepreface
+\afterpreface
+
+\include{analisis}
+\include{diseno}
+\include{implementacion}
+
+\end{document}
